@@ -98,7 +98,7 @@
                             <label for="username" class="col-md-4 control-label"> Username</label>
 
                             <div class="col-md-6">
-                                <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}" required>
+                                <input id="username" type="username" class="form-control" name="username" value="{{ request('username') }}" required>
 
                                 @if ($errors->has('username'))
                                     <span class="help-block">

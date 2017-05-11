@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4">
-            <h2>Welcome to Twitbook.</h2>
-            <p>Connect with your friends - and other fascinating people. Get in-the-moment updates on the things that interest you. And watch events unfold, in real time, from every angle.</p>
+            <h2>Welcome to Markit!</h2>
+            <p>Connect with your friends Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maxime, aut quos est ea alias provident aliquid quia ratione deleniti, rem laboriosam vel delectus sequi, voluptas voluptatibus, voluptatum culpa pariatur!</p>
         </div>
         <div class="col-sm-5 col-sm-offset-3">
             <div class="panel panel-default">
@@ -100,7 +100,7 @@
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
                             <input name="email" type="text" class="form-control" placeholder="Email Address" required/>
                         </div>
-                        <input type="submit" class="btn btn-success pull-right" name="login" value="Signup for Twitbook" />
+                        <input type="submit" class="btn btn-success pull-right" name="login" value="Signup for MarkIt" />
                     </form>
                 </div>
             </div>
