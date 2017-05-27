@@ -138,7 +138,7 @@
 
                             <div class="col-md-6">
 
-                                <input id="bio" type="text" class="form-control" name="bio" value="{{ request('bio') }}" required autofocus>
+                                <textarea id="bio" type="text" class="form-control" name="bio" value="{{ request('bio') }}" required autofocus></textarea>
 
                                 @if ($errors->has('bio'))
                                     <span class="help-block">
