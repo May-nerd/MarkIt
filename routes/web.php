@@ -22,3 +22,7 @@ Route::get('/home', 'HomeController@index');
 Route::get('/profile/{username}', 'ProfileController@profile');
 
 Route::post('/registrationform', 'RegistrationController@index');
+
+Route::get('/auction',  function () {
+    return view('auction');
+});

@@ -43,6 +43,14 @@
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-globe"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
+            <form class="navbar-form navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </form>
 		</div>
 	</div>
 	<div id="navDemo" class="markit-bar-block markit-theme-d2 markit-hide markit-hide-large markit-hide-medium markit-large">

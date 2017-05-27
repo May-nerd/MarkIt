@@ -1,0 +1,24 @@
+span.protrude{
+	font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #006600;
+    letter-spacing: 1.4px;
+    border-bottom: solid 1px #006600;
+    text-transform: uppercase;
+}
+#parentWell {
+    background-color:#CCC;
+    /*min-width:50%;*/
+    max-width:100%;
+    /*overflow-x:scroll;*/
+    /*white-space:nowrap;*/
+    display: block;
+}
+
+#parentWell .well {
+    /*border: 1px solid #006;*/
+    /*white-space:nowrap;*/
+    display: inline-block;
+    width:30%;
+}
