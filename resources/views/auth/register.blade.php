@@ -134,11 +134,8 @@
                             <label for="bio" class="col-md-4 control-label">Short Description</label>
 
                             <div class="col-md-6">
-<<<<<<< HEAD
-                                <textarea id="bio" type="text" class="form-control" name="bio" value="{{ old('bio') }}" required autofocus> </textarea>
-=======
+
                                 <input id="bio" type="text" class="form-control" name="bio" value="{{ request('bio') }}" required autofocus>
->>>>>>> c4e86a17881e2a0f12edbde38633d80cf4c526c3
 
                                 @if ($errors->has('bio'))
                                     <span class="help-block">
