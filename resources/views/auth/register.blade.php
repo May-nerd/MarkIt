@@ -118,9 +118,10 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('bio') ? ' has-error' : '' }}">
-                            <label for="bio" class="col-md-4 control-label">Biography</label>
+                            <label for="bio" class="col-md-4 control-label">Short Description</label>
 
                             <div class="col-md-6">
+
                                 <input id="bio" type="text" class="form-control" name="bio" value="{{ request('bio') }}" required autofocus>
 
                                 @if ($errors->has('bio'))
