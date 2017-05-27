@@ -10,7 +10,7 @@
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
          <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/img/img.jpg" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
@@ -90,13 +90,6 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
-                <div class="panel-heading">
-                  <div class="well well-sm">
-                    <p>Participant Count: <span class="protrude">2</span></p>                   
-                    <p>Status: <span class="protrude">Active</span></p>                 
-                    <p>Time Remaining: <span class="protrude">2 Days, 18 Hours</span></p>  
-                  </div>               
-                </div>
                 <div class="panel-body">
                   <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
                   <p>
@@ -163,15 +156,26 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+          <p>6 Days, 23 Hours left</p>
+          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
+          <p>Sat, 27 May 2017</p>
         </div>
       </div>
       <br>
-      
+      <div class="markit-card-2 markit-round markit-white markit-center">
+        <div class="markit-container">
+          <p>Number of Bids</p>
+          <p><strong>8</strong></p>
+        </div>
+      </div>
+      <br>
+      <div class="markit-card-2 markit-round markit-white markit-center">
+        <div class="markit-container">
+          <p>Average Bid</p>
+          <p><strong>400 BitCoins</strong></p>
+        </div>
+      </div>
+      <br>
     <!-- End Right Column -->
     </div>
     

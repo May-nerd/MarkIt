@@ -9,12 +9,12 @@
       <!-- Profile -->
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
-         <h4 class="markit-center">Username</h4>
+         <h4 class="markit-center">My Profile</h4>
          <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="User"></p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i>John Doe</p>
+         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
-         <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i></p>
+         <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> April 1, 1988</p>
         </div>
 
       </div>

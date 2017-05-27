@@ -26,3 +26,7 @@ Route::post('/registrationform', 'RegistrationController@index');
 Route::get('/auction',  function () {
     return view('auction');
 });
+
+Route::get('/activeitems',  function () {
+    return view('activeitems');
+});
