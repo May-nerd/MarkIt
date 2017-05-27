@@ -7,20 +7,10 @@ span.protrude{
     border-bottom: solid 1px #006600;
     text-transform: uppercase;
 }
-#parentWell {
-    background-color:#CCC;
-    /*min-width:50%;*/
-    max-width:100%;
-    /*overflow-x:scroll;*/
-    /*white-space:nowrap;*/
-    display: block;
-}
-#parentWell .well {
-    /*border: 1px solid #006;*/
-    /*white-space:nowrap;*/
-    display: inline-block;
-    width:30%;
-}
+/*.float-details{
+	float: left;
+	overflow: auto;
+}*/
 .posted-image{
 	max-height: 350px;
 	width: 100%;

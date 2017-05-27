@@ -40,8 +40,8 @@
 			<a href="#" class="markit-bar-item markit-button markit-padding-large markit-theme-d4"><i class="fa fa-home markit-margin-right"></i>MarkIt</a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Profile"><i class="fa fa-user"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Marked Items"><i class="fa fa-check"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-globe"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
+			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-bell"><span class="badge badge-color">1</span></i></a>
+			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"><span class="badge badge-color">2</span></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
             <form class="navbar-form navbar-right">
                 <div class="input-group">

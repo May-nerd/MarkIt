@@ -91,17 +91,11 @@
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
                 <div class="panel-heading">
-                  <div id="parentWell">
-                    <!-- <div class="well well-sm"> -->
-                      <p>Number of Participants: <span class="protrude">2</span></p>
-                    <!-- </div> -->
-                    <!-- <div class="well well-sm"> -->
-                      <p>Status: <span class="protrude">Active</span></p>
-                    <!-- </div> -->
-                    <!-- <div class="well well-sm"> -->
-                      <p>Remaining Time: <span class="protrude">2 Days, 18 Hours</span></p>
-                    <!-- </div> -->
-                  </div>
+                  <div class="well well-sm">
+                    <p>Participant Count: <span class="protrude">2</span></p>                   
+                    <p>Status: <span class="protrude">Active</span></p>                 
+                    <p>Time Remaining: <span class="protrude">2 Days, 18 Hours</span></p>  
+                  </div>               
                 </div>
                 <div class="panel-body">
                   <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
@@ -134,31 +128,34 @@
             <div class="markit-container markit-padding">
                 <div class="panel panel-default">
                   <div class="panel-heading">Auction Activity for bid #8</div>
-                  <table class="table">
-                    <tr>
-                       <th>Name</th>
-                       <th>Bidded at</th>
-                       <th>Reputation</th>
-                       <th>Amount</th>
-                    </tr>
-                    <tr>
-                      <td>Timmy Thompson Clarke</td>
-                      <td>January 21, 2029</td>
-                      <td>4.9 stars</td>
-                      <td>200 BitCoins</td>
-                    </tr>
-                    <tr>
-                      <td>Jennifer Doe</td>
-                      <td>January 22, 2029</td>
-                      <td>3.9 stars</td>
-                      <td>500 BitCoins</td>
-                    </tr>
-                  </table>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tr>
+                         <th>Name</th>
+                         <th>Bidded at</th>
+                         <th>Reputation</th>
+                         <th>Amount</th>
+                      </tr>
+                      <tr>
+                        <td>Timmy Thompson Clarke</td>
+                        <td>January 21, 2029</td>
+                        <td>4.9 stars</td>
+                        <td>200 BitCoins</td>
+                      </tr>
+                      <tr>
+                        <td>Jennifer Doe</td>
+                        <td>January 22, 2029</td>
+                        <td>3.9 stars</td>
+                        <td>500 BitCoins</td>
+                      </tr>
+                    </table>
+                  </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br>
     <!-- End Middle Column -->
     </div>
     

@@ -10,7 +10,7 @@
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
          <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/img/img.jpg" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="User"></p>
          <hr>
          <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
@@ -36,7 +36,7 @@
          <div class="markit-row-padding">
          <br>
            <div class="markit-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
              <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
@@ -79,15 +79,6 @@
         </div>
       </div>
       <br>
-      
-      <!-- Alert Box -->
-    <!--   <div class="markit-container markit-display-container markit-round markit-theme-l4 markit-border markit-theme-border markit-margin-bottom markit-hide-small">
-        <span onclick="this.parentElement.style.display='none'" class="markit-button markit-theme-l3 markit-display-topright">
-          <i class="fa fa-remove"></i>
-        </span>
-        <p><strong>Hey!</strong></p>
-        <p>People are looking at your profile. Find out who.</p>
-      </div> -->
     
     <!-- End Left Column -->
     </div>
@@ -108,7 +99,7 @@
       </div>
       
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
+        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">1 min</span>
         <h4>John Doe</h4><br>
         <hr class="markit-clear">
@@ -121,22 +112,20 @@
               <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="markit-margin-bottom">
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
+        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button>
       </div>
       
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar5.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
+        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">16 min</span>
         <h4>Jane Doe</h4><br>
         <hr class="markit-clear">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
       </div>  
 
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
+        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">32 min</span>
         <h4>Angie Jane</h4><br>
         <hr class="markit-clear">
@@ -144,7 +133,6 @@
         <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
       </div> 
       
     <!-- End Middle Column -->
@@ -161,40 +149,37 @@
           <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
         </div>
       </div>
-      <br>
-      <!-- 
-      <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container">
-          <p>Friend Request</p>
-          <img src="/w3images/avatar6.png" alt="Avatar" style="width:50%"><br>
-          <span>Jane Doe</span>
-          <div class="markit-row markit-opacity">
-            <div class="markit-half">
-              <button class="markit-button markit-block markit-green markit-section" title="Accept"><i class="fa fa-check"></i></button>
-            </div>
-            <div class="markit-half">
-              <button class="markit-button markit-block markit-red markit-section" title="Decline"><i class="fa fa-remove"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br> -->
-      
-     <!--  <div class="markit-card-2 markit-round markit-white markit-padding-16 markit-center">
-        <p>ADS</p>
-      </div>
-      <br>
-      
-      <div class="markit-card-2 markit-round markit-white markit-padding-32 markit-center">
-        <p><i class="fa fa-bug markit-xxlarge"></i></p>
-      </div> -->
-      
+      <br>      
     <!-- End Right Column -->
     </div>
     
   <!-- End Grid -->
   </div>
 
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("markit-show") == -1) {
+        x.className += " markit-show";
+        x.previousElementSibling.className += " markit-theme-d1";
+    } else { 
+        x.className = x.className.replace("markit-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" markit-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("markit-show") == -1) {
+        x.className += " markit-show";
+    } else { 
+        x.className = x.className.replace(" markit-show", "");
+    }
+}
+</script>
 @endsection
 
 @push('styles')
