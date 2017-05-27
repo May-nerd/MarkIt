@@ -31,4 +31,8 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/activeitems',  function () {
 	    return view('activeitems');
 	});
+	
+	Route::get('/addauction',  function () {
+	    return view('addauction');
+	});	
 });
