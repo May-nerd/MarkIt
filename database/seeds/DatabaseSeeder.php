@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
                    'username' => "maynerd",
                    'password' => bcrypt("secret"),
                    'bio' => "Programmer by the day.",
-                    'profilepicture' => "random.png",
-                    'profileextension' => "png"
+                   'profilepicture' => "fd01343d8cc267c73907fc55b6198dab.jpeg",
+                   'profileextension' => "jpeg"
         ]);
         factory(App\User::class, 100)->create();
     }
