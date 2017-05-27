@@ -5,7 +5,7 @@
 		<img src="/uploads/6.jpg" alt="Welcome Banner">
 		<h2> Markit </h2>
 	</div>
-	<div class="container">
+
 		<div class="col-md-3 col-md-3 sidebar">
 			<ul class="nav nav-sidebar">
 				<p> Categories </p> 
@@ -22,7 +22,7 @@
 		<div class="col-md-9">
 			hello
 		</div>
-	</div>	
+
 @endsection
 
 @push('styles')
