@@ -16,6 +16,7 @@
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
          <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> April 1, 1988</p>
         </div>
+
       </div>
       <br>
       
@@ -193,6 +194,7 @@
     
   <!-- End Grid -->
   </div>
+
 @endsection
 
 @push('styles')

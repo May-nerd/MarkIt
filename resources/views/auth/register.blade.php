@@ -24,19 +24,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('mname') ? ' has-error' : '' }}">
-                            <label for="mname" class="col-md-4 control-label">Middle Name</label>
-
-                            <div class="col-md-6">
-                                <input id="mname" type="text" class="form-control" name="mname" value="{{ request('mname') }}" required autofocus>
-
-                                @if ($errors->has('mname'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('mname') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
                         <div class="form-group{{ $errors->has('lname') ? ' has-error' : '' }}">
                             <label for="lname" class="col-md-4 control-label">Last Name</label>
