@@ -102,56 +102,37 @@
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">1 min</span>
         <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6><br>
+        <h6>Rating: 5 Immortal Pearls</h6>
         <hr class="markit-clear">
-        <p>Qilin Horns</p>
-          <div class="markit-row-padding" style="margin:0 -16px">
-            <div class="markit-half">
-              <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
-            </div>
-            <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="markit-row-padding">
+          <p class="item-name">Qilin Horns</p>
+          <div class="markit-half">
+            <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
+          </div>
+          <div class="markit-half">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
       </div>
 
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4><br>
+        <span class="markit-right markit-opacity">8 min</span>
+        <h4>Micah Doe</h4>
+        <h6>Rating: 5 Immortal Pearls</h6>
         <hr class="markit-clear">
-        <p>Drop of Minion's Might</p>
-          <div class="markit-row-padding" style="margin:0 -16px">
-            <div class="markit-half">
-              <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
-            </div>
-            <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="markit-row-padding">
+          <p class="item-name">Drop of Minion's Might</p>
+          <div class="markit-half">
+            <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
+          </div>
+          <div class="markit-half">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
       </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="markit-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-      </div>  
-
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="markit-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-      </div> 
       
     <!-- End Middle Column -->
     </div>
@@ -202,5 +183,6 @@ function openNav() {
 
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
 @endpush
 
