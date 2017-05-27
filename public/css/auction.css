@@ -17,3 +17,11 @@ span.protrude{
 	object-fit: cover;
 	object-position: center;
 }
+
+.item-name{
+	padding: 0 8px;
+}
+
+.mark-btn{
+	margin: 1em 16px;
+}

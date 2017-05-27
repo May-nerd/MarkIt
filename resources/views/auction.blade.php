@@ -102,7 +102,16 @@
           </div>
         </div>
       </div>
-        <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+            </div>
+          </div>
+        </div>
+      </div>
+      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
       <div class="markit-row-padding">
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
