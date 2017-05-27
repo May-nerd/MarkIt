@@ -92,15 +92,15 @@
               <div class="panel panel-default">
                 <div class="panel-heading">
                   <div id="parentWell">
-                    <div class="well well-sm">
+                    <!-- <div class="well well-sm"> -->
                       <p>Number of Participants: <span class="protrude">2</span></p>
-                    </div>
-                    <div class="well well-sm">
+                    <!-- </div> -->
+                    <!-- <div class="well well-sm"> -->
                       <p>Status: <span class="protrude">Active</span></p>
-                    </div>
-                    <div class="well well-sm">
+                    <!-- </div> -->
+                    <!-- <div class="well well-sm"> -->
                       <p>Remaining Time: <span class="protrude">2 Days, 18 Hours</span></p>
-                    </div>
+                    <!-- </div> -->
                   </div>
                 </div>
                 <div class="panel-body">
@@ -110,6 +110,18 @@
                     <span>Lorem from database Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
                   </p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+              <div class="panel panel-default">
+                <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">               
               </div>
             </div>
           </div>
@@ -147,46 +159,6 @@
           </div>
         </div>
       </div>
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar2.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4><br>
-        <hr class="markit-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="markit-row-padding" style="margin:0 -16px">
-            <div class="markit-half">
-              <img src="/w3images/lights.jpg" style="width:100%" alt="Northern Lights" class="markit-margin-bottom">
-            </div>
-            <div class="markit-half">
-              <img src="/w3images/nature.jpg" style="width:100%" alt="Nature" class="markit-margin-bottom">
-          </div>
-        </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar5.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
-        <span class="markit-right markit-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="markit-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div>  
-
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/w3images/avatar6.png" alt="Avatar" class="markit-left markit-circle markit-margin-right" style="width:60px">
-        <span class="markit-right markit-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="markit-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-        <button type="button" class="markit-button markit-theme-d2 markit-margin-bottom"><i class="fa fa-comment"></i>  Comment</button> 
-      </div> 
-      
     <!-- End Middle Column -->
     </div>
     
