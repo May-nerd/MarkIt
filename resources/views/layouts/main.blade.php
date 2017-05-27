@@ -29,6 +29,8 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <script type="text/javascript" src="/js/js.js"></script>
+    <script type="text/javascript" src="/js/script.js"></script>
 </head>
 
 <body class="markit-theme-l5">

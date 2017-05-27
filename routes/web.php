@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/notifications', function () {
+    return view('notifications');
+});
+
 Auth::routes();
 
 
