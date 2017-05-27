@@ -67,6 +67,11 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $file = request()->file('profilepicture');
+        $ext = $file->guessClientExtension();
+        $filename = $file->hashName();
+        request()->file('profilepicture')->store('public/profilepicture');
+
         return User::create([
             'fname' => $data['fname'],
             'lname' => $data['lname'],
@@ -75,7 +80,9 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
-            'bio' => $data['bio']
+            'bio' => $data['bio'],
+            'profilepicture' => $filename,
+            'profileextension' => $ext
         ]);
     }
 }

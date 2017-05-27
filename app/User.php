@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'fname', 'lname', 'town', 'province', 'email', 'username', 'password', 'bio',
+        'fname', 'lname', 'town', 'province', 'email', 'username', 'password', 'bio', 'profilepicture', 'profileextension',
     ];
 
     /**
@@ -26,4 +26,25 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function setFNameAttribute($value)
+    {
+        $this->attributes['fname'] = ucwords($value);
+    }
+
+    public function setLNameAttribute($value)
+    {
+        $this->attributes['lname'] = ucwords($value);
+    }
+
+    public function setTownAttribute($value)
+    {
+        $this->attributes['town'] = ucwords($value);
+    }
+
+    public function setProvinceAttribute($value)
+    {
+        $this->attributes['province'] = ucwords($value);
+    }
 }

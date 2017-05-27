@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/main.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('/css/main.css')}}" rel="stylesheet"> --}}
     <link href="{{asset('/ppcss/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('/ppcss/css/themeColorMarkit.css')}}" rel="stylesheet">
     <link href="{{asset('/ppcss/css/openSans.css')}}" rel="stylesheet">
@@ -42,8 +42,12 @@
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Marked Items"><i class="fa fa-check"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-globe"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
-		</div>
+			<a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+
+        </div>
 	</div>
 	<div id="navDemo" class="markit-bar-block markit-theme-d2 markit-hide markit-hide-large markit-hide-medium markit-large">
 		<a href="#" class="markit-bar-item markit-button markit-padding-large">Link 1</a>
@@ -52,6 +56,7 @@
 		<a href="#" class="markit-bar-item markit-button markit-padding-large">My Profile</a>
 	</div>
 	@yield('content')
+    <script src="{{asset('/js/jquery.js')}}"></script>
 	<script src="{{asset('/js/bootstrap.min.js')}}"></script>
     @stack('scripts')
 </body>

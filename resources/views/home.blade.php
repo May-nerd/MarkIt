@@ -9,12 +9,12 @@
       <!-- Profile -->
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
-         <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/img/img.jpg" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <h4 class="markit-center">{{ ucwords(strtolower(Auth::user()->fname." ".Auth::user()->lname)) }}</h4>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
+         </p>
          <hr>
          <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
-         <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> April 1, 1988</p>
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
         </div>
 
       </div>
@@ -99,7 +99,7 @@
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
-              <h6 class="markit-opacity">Social Media template by w3.css</h6>
+              <h6 class="markit-opacity"></h6>
               <p contenteditable="true" class="markit-border markit-padding">Status: Feeling Blue</p>
               <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i>  Post</button> 
             </div>

@@ -7,8 +7,24 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Register</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
                         {{ csrf_field() }}
+                        
+                        <div class="form-group{{ $errors->has('profilepicture') ? ' has-error' : '' }}">
+                            <label for="profilepicture" class="col-md-4 control-label">Profile Picture</label>
+
+                            <div class="col-md-6">
+                                
+                                <input id="profilepicture" type="file" name="profilepicture" value="{{ request('profilepicture') }}" required>
+
+                                @if ($errors->has('profilepicture'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('profilepicture') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
 
                         <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
                             <label for="fname" class="col-md-4 control-label">First Name</label>
