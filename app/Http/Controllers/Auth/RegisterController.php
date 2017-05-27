@@ -49,7 +49,6 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'fname' => 'required|max:255',
-            'mname' => 'required|max:255',
             'lname' => 'required|max:255',
             'town' => 'required|max:255',
             'province' => 'required|max:255',
@@ -68,16 +67,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $file = request()->file('profilepicture');
+        $ext = $file->guessClientExtension();
+        $filename = $file->hashName();
+        request()->file('profilepicture')->store('public/profilepicture');
+
         return User::create([
             'fname' => $data['fname'],
-            'mname' => $data['mname'],
             'lname' => $data['lname'],
             'town' => $data['town'],
             'province' => $data['province'],
             'email' => $data['email'],
             'username' => $data['username'],
             'password' => bcrypt($data['password']),
-            'bio' => $data['bio']
+            'bio' => $data['bio'],
+            'profilepicture' => $filename,
+            'profileextension' => $ext
         ]);
     }
 }

@@ -9,15 +9,13 @@
       <!-- Profile -->
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
-
-         <h4 class="markit-center">{{ Auth::user()->fname." ".Auth::user()->lname }}</h4>
-         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
-         </p>
+         <h4 class="markit-center">My Profile</h4>
+         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
+         <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> April 1, 1988</p>
         </div>
-
       </div>
       <br>
       
@@ -37,7 +35,7 @@
          <div class="markit-row-padding">
          <br>
            <div class="markit-half">
-             <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/lights.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
              <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
@@ -91,52 +89,75 @@
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
-              <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Status: Feeling Blue</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i>  Post</button> 
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
+                  <p>
+                    Description: <br>
+                    <span>Lorem from database Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
-        <hr class="markit-clear">
-        <div class="markit-row-padding">
-          <p class="item-name">Qilin Horns</p>
-          <div class="markit-half">
-            <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
-          </div>
-          <div class="markit-half">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+            </div>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>
-
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">8 min</span>
-        <h4>Micah Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
-        <hr class="markit-clear">
-        <div class="markit-row-padding">
-          <p class="item-name">Drop of Minion's Might</p>
-          <div class="markit-half">
-            <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
-          </div>
-          <div class="markit-half">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+              <div class="panel panel-default">
+                <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">               
+              </div>
+            </div>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>
-      
+      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+                <div class="panel panel-default">
+                  <div class="panel-heading">Auction Activity for bid #8</div>
+                  <div class="table-responsive">
+                    <table class="table">
+                      <tr>
+                         <th>Name</th>
+                         <th>Bidded at</th>
+                         <th>Reputation</th>
+                         <th>Amount</th>
+                      </tr>
+                      <tr>
+                        <td>Timmy Thompson Clarke</td>
+                        <td>January 21, 2029</td>
+                        <td>4.9 stars</td>
+                        <td>200 BitCoins</td>
+                      </tr>
+                      <tr>
+                        <td>Jennifer Doe</td>
+                        <td>January 22, 2029</td>
+                        <td>3.9 stars</td>
+                        <td>500 BitCoins</td>
+                      </tr>
+                    </table>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
     <!-- End Middle Column -->
     </div>
     
@@ -144,44 +165,31 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+          <p>6 Days, 23 Hours left</p>
+          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
+          <p>Sat, 27 May 2017</p>
         </div>
       </div>
-      <br>      
+      <br>
+      <div class="markit-card-2 markit-round markit-white markit-center">
+        <div class="markit-container">
+          <p>Number of Bids</p>
+          <p><strong>8</strong></p>
+        </div>
+      </div>
+      <br>
+      <div class="markit-card-2 markit-round markit-white markit-center">
+        <div class="markit-container">
+          <p>Average Bid</p>
+          <p><strong>400 BitCoins</strong></p>
+        </div>
+      </div>
+      <br>
     <!-- End Right Column -->
     </div>
     
   <!-- End Grid -->
   </div>
-
-<script>
-// Accordion
-function myFunction(id) {
-    var x = document.getElementById(id);
-    if (x.className.indexOf("markit-show") == -1) {
-        x.className += " markit-show";
-        x.previousElementSibling.className += " markit-theme-d1";
-    } else { 
-        x.className = x.className.replace("markit-show", "");
-        x.previousElementSibling.className = 
-        x.previousElementSibling.className.replace(" markit-theme-d1", "");
-    }
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-    var x = document.getElementById("navDemo");
-    if (x.className.indexOf("markit-show") == -1) {
-        x.className += " markit-show";
-    } else { 
-        x.className = x.className.replace(" markit-show", "");
-    }
-}
-</script>
 @endsection
 
 @push('styles')

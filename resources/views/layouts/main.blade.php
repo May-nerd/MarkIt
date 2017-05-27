@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{asset('/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{asset('/css/main.css')}}" rel="stylesheet">
+    {{-- <link href="{{asset('/css/main.css')}}" rel="stylesheet"> --}}
     <link href="{{asset('/ppcss/css/main.css')}}" rel="stylesheet">
     <link href="{{asset('/ppcss/css/themeColorMarkit.css')}}" rel="stylesheet">
     <link href="{{asset('/ppcss/css/openSans.css')}}" rel="stylesheet">
@@ -41,11 +41,26 @@
 			<a class="markit-bar-item markit-button markit-hide-medium markit-hide-large markit-right markit-padding-large markit-hover-white markit-large markit-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-padding-large markit-theme-d4"><i class="fa fa-home markit-margin-right"></i>MarkIt</a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Profile"><i class="fa fa-user"></i></a>
+            <a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Active Items"><i class="glyphicon glyphicon-ok-circle"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Marked Items"><i class="fa fa-check"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-globe"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
-		</div>
+
+			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Notifications"><i class="fa fa-bell"><span class="badge badge-color">1</span></i></a>
+            <a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Messages"><i class="fa fa-envelope"><span class="badge badge-color">2</span></i></a>
+			<a href="{{ url('/logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="markit-bar-item markit-button markit-hide-small markit-right markit-padding-large markit-hover-white" title="Logout"><i class="fa fa-power-off"></i></a>
+            <form class="navbar-form navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <div class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </div>
+            </form>
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
+
+        </div>
+
 	</div>
 	<div id="navDemo" class="markit-bar-block markit-theme-d2 markit-hide markit-hide-large markit-hide-medium markit-large">
 		<a href="#" class="markit-bar-item markit-button markit-padding-large">Link 1</a>
@@ -54,6 +69,7 @@
 		<a href="#" class="markit-bar-item markit-button markit-padding-large">My Profile</a>
 	</div>
 	@yield('content')
+    <script src="{{asset('/js/jquery.js')}}"></script>
 	<script src="{{asset('/js/bootstrap.min.js')}}"></script>
     @stack('scripts')
 </body>
