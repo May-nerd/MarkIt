@@ -1,153 +1,159 @@
-@extends('layouts.app')
-<style type="text/css">
-        
-#myCarousel {
-    position: fixed;
-    top: 0;
-    z-index: -15;
-}
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/welcome.css">
+<body>
 
-#myCarousel > .carousel-inner > .item > img{
-    width: 200vw;
-    height: 100vh;  
-    object-position: center;
-    object-fit: cover;
-}  
-
-.input-group {
-    padding-bottom: 5px;
-}
-
-h2{
-   color: black;
-   font-size:50%;
-}
-
-
-</style>
-
-@section('content')
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                <img src="/uploads/1.jpg" alt="First Slide">
-            </div>
-            <div class="item">
-                <img src="/uploads/2.jpg" alt="Second Slide">
-            </div>
-            <div class="item">
-                <img src="/uploads/3.jpg" alt="Third Slide">
-            </div>
-            <div class="item">
-                <img src="/uploads/4.jpg" alt="Fourth Slide">
-            </div>
-            <div class="item">
-                <img src="/uploads/5.jpg" alt="Fifth Slide">
-            </div>
-        </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+    <a href="#home" class="w3-bar-item w3-button"><b>WELCOME TO MARKIT!</b></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="/login" class="w3-bar-item w3-button">Login</a>
+      <a href="/register" class="w3-bar-item w3-button">Register</a>
     </div>
+  </div>
 </div>
-<div class="container">
-    <div class="row">
 
-        <div class="col-sm-4">
-            <h2>Welcome to Markit!</h2>
-            <p>Connect with your friends Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maxime, aut quos est ea alias provident aliquid quia ratione deleniti, rem laboriosam vel delectus sequi, voluptas voluptatibus, voluptatum culpa pariatur!</p>
-        </div>
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="/uploads/architect.jpg" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>MARKIT!</b></span></h1>
+  </div>
+</header>
 
-        <div class="col-sm-5 col-sm-offset-3">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3>Login to your account</h3>
-                </div>
-                <div class="panel-body">
-                      <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
 
-                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">Username</label>
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Categories</h3>
+  </div>
 
-                            <div class="col-md-6">
-                                <input id="username" type="username" class="form-control" name="username" value="{{ old('username') }}" required autofocus>
-
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-offset-2">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : ''}}> Remember Me  |<a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?
-                                </a> 
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-success pull-right">
-                                    Login
-                                </button>
-
-
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="panel panel-default panel-signup">
-                <div class="panel-heading">
-                    <h3>New to MarkIt? <span class="small">Sign up</span></h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" method="POST" action="{{ url('/registrationform') }}">
-                        {{ csrf_field() }}  
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="username" type="text" class="form-control" placeholder="Username" required />
-                        </div>
-
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="fname" type="text" class="form-control" placeholder="First Name" required />
-                        </div>
-
-                       
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="lname" type="text" class="form-control" placeholder="Last Name" required />
-                        </div>
-                        
-
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input name="email" type="text" class="form-control" placeholder="Email Address" required/>
-                        </div>
-                        <input type="submit" class="btn btn-success pull-right" name="login" value="Signup for MarkIt" />
-                    </form>
-                </div>
-            </div>
-        </div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Fashion </a></div>
+        <img src="/uploads/fashion.jpg" alt="Fashion" style="width:100%; height: 15vw;">
+      </div>
     </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Home Living </a></div>
+        <img src="/uploads/homeliving.jpg" alt="Home Living" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Electronics </a></div>
+        <img src="/uploads/electronics.jpg" alt="Electronics" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Health and Beauty</a></div>
+        <img src="/uploads/healthandbeauty.jpg" alt="Health and Beauty" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Baby and Toys </a></div>
+        <img src="/uploads/babyandtoys.jpg" alt="Baby and Toys" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Sports and Travel </a></div>
+        <img src="/uploads/sportsandtravel.jpg" alt="sportsandtravel" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Motors </a></div>
+        <img src="/uploads/motors.jpg" alt="Motors" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="/login"> Others </a></div>
+        <img src="/uploads/others.jpg" alt="Others" style="width:100%; height: 15vw;">
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+      occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+      laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+  </div>
+
+  <div class="w3-row-padding w3-grayscale">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/uploads/2.jpg" alt="John" style="width:100%">
+      <h3>Maynard Vargas</h3>
+      <p class="w3-opacity">CEO & Founder</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/uploads/2.jpg" alt="Jane" style="width:100%">
+      <h3>Rosjel Jolly Lambungan</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/uploads/2.jpg" alt="Mike" style="width:100%">
+      <h3>Rollin Pacheco</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="/uploads/2.jpg" alt="Dan" style="width:100%">
+      <h3>Jessa Palquiran</h3>
+      <p class="w3-opacity">Architect</p>
+      <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+      <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-padding-32" id="contact">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Contact</h3>
+    <p>Lets get in touch and talk about your and our next online shopping.</p>
+    <form action="/action_page.php" target="_blank">
+      <input class="w3-input" type="text" placeholder="Name" required name="Name">
+      <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </form>
+  </div>
+  
+<!-- End page content -->
 </div>
-@endsection
+
+<!-- Google Map -->
+<div id="googleMap" class="w3-grayscale" style="width:100%;height:450px;"></div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Alright Reserved 2017, CMSC 129</p>
+</footer>
+
+
+</body>
+</html>
