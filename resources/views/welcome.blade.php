@@ -85,11 +85,7 @@
                             <input name="fname" type="text" class="form-control" placeholder="First Name" required />
                         </div>
 
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="mname" type="text" class="form-control" placeholder="Middle Name" required />
-                        </div>
-                        
+                       
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                             <input name="lname" type="text" class="form-control" placeholder="Last Name" required />
