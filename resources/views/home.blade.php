@@ -99,7 +99,7 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insret tagline with anther tag</p>
+              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
               <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
             </div>
           </div>
