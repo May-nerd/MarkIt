@@ -14,7 +14,7 @@ class Auction extends Model
      * @var array
      */
     protected $fillable = [
-        'item_name', 'description', 'image_path', 'image_extension', 'min_bid', 'auction_days', 'is_sold', 'sold_id'
+        'poster_id','item_name', 'description', 'image_path', 'image_extension', 'min_bid', 'auction_days', 'is_sold', 'sold_id'
     ];
 
     /**

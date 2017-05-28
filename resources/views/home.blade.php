@@ -94,17 +94,19 @@
     <!-- Middle Column -->
     <div class="markit-col m7">
     
-      <div class="markit-row-padding">
-        <div class="markit-col m12">
-          <div class="markit-card-2 markit-round markit-white">
-            <div class="markit-container markit-padding">
+      <div class="markit-col m12">
+          <!-- <div class="markit-card-2 markit-round markit-white"> -->
+            <div class="markit-container">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
-            </div>
+                <!-- <div class="col-md-6 col-md-offset-4"> -->
+                  <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
+                <!-- </div> -->
+            <!-- </div> -->
           </div>
-        </div>
-      </div>
+        </div><!--  -->
+        <br>
+        <br>
+
 
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
@@ -134,15 +136,17 @@
     
     <!-- Right Column -->
     <div class="markit-col m2">
-      <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+      <form role="form" method="POST" action="{{ url('/createauction') }}" enctype="multipart/form-data">
+        <div class="markit-card-2 markit-round markit-white markit-center">
+          <div class="markit-container">
+            <p>Remember the Bids:</p>
+            <img src="/uploads/qilin.jpg" alt="Forest" style="width:100%;">
+            <p><strong>Qilin Horns</strong></p>
+            <p>Friday 15:00</p>
+            <p><button class="markit-button markit-block markit-theme-l4">Go to Auction</button></p>
+          </div>
         </div>
-      </div>
+      </form>
       <br>      
     <!-- End Right Column -->
     </div>

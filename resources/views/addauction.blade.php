@@ -89,7 +89,7 @@
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
-              <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
+              <form class="form-horizontal" role="form" method="POST" action="{{ url('/createauction') }}" enctype="multipart/form-data">
               {{ csrf_field() }}
                 <div class="form-group">
                   <label for="itempicture" class="col-md-4 control-label">Upload Item Picture</label>
@@ -98,27 +98,27 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="itemname" class="col-md-4 control-label">Item Name</label>
+                  <label for="item_name" class="col-md-4 control-label">Item Name</label>
                   <div class="col-md-6">
-                    <input id="itemname" type="text" class="form-control" name="itemname" value="{{ request('itemname') }}" required autofocus>
+                    <input id="item_name" type="text" class="form-control" name="item_name" required autofocus>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="description" class="col-md-4 control-label">Description</label>
                   <div class="col-md-6">
-                    <textarea class="form-control" name="description" value="{{ request('description') }}" required></textarea>
+                    <textarea class="form-control" name="description" value="{{ request('description') }}" required ></textarea>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="minbid" class="col-md-4 control-label">Minimum Bid (peso)</label>
+                  <label for="min_bid" class="col-md-4 control-label">Minimum Bid (peso)</label>
                   <div class="col-md-6">
-                    <input id="minbid" type="number" min="0" class="form-control" name="minbid" placeholder="P100.00" value="{{ request('minbid') }}" required>
+                    <input id="min_bid" type="number" min="0" class="form-control" name="min_bid" placeholder="P100.00" value="{{ request('min_bid') }}" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="duration" class="col-md-4 control-label">Auction Duration (days)</label>
+                  <label for="auction_days" class="col-md-4 control-label">Auction Duration (days)</label>
                   <div class="col-md-6">
-                    <input id="duration" type="number" min="1" class="form-control" name="duration" value="{{ request('duration') }}" required>
+                    <input id="auction_days" type="number" min="1" class="form-control" name="auction_days" value="{{ request('auction_days') }}" required>
                   </div>
                 </div>
                 <div class="form-group">

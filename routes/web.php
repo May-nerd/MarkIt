@@ -28,16 +28,11 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', 'HomeController@index');
 	Route::resource('/profile', 'ProfileController');
 
-
-	Route::get('/auction',  function () {
-	    return view('auction');
-	});
+	Route::get('/addauction',  'AuctionController@add');	
+	Route::get('/auction/{id}',  'AuctionController@show');	
+	Route::post('/createauction',  'AuctionController@create');	
 
 	Route::get('/activeitems',  function () {
 	    return view('activeitems');
 	});
-	
-	Route::get('/addauction',  function () {
-	    return view('addauction');
-	});	
 });

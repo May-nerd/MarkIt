@@ -13,10 +13,10 @@
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
+                  <p>Item name: <span class="protrude">{{$auction->item_name}}</span></p>
                   <p>
                     Description: <br>
-                    <span>Lorem from database Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    <span>{{$auction->description}}</span>
                   </p>
                 </div>
               </div>
@@ -40,7 +40,7 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
-                <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">               
+                <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$auction->image_path)}}" alt="Item Photo">               
               </div>
             </div>
           </div>
@@ -52,7 +52,7 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
                 <div class="panel panel-default">
-                  <div class="panel-heading">Auction Activity for bid #8</div>
+                  <div class="panel-heading">Auction Activity (Auction ID: {{$auction->id}}) </div>
                   <div class="table-responsive">
                     <table class="table">
                       <tr>
