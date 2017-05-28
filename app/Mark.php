@@ -26,4 +26,9 @@ class Mark extends Model
         'password', 'remember_token',
     ];
 
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }

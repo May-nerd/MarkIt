@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Auction;
 use Auth;
+use Carbon\Carbon;
+
 class AuctionController extends Controller
 {
     public function index($id){
@@ -19,7 +21,14 @@ class AuctionController extends Controller
 
     public function show($id){
         $auction = Auction::where('id', $id)->first();
-        return view('auction', compact('auction'));
+
+
+        $days = $auction->auction_days;
+        $end_date = Carbon::now()->addDays($days);
+        $left = $end_date->subDays(Carbon::now()->dayOfWeek);
+
+
+        return view('auction', compact('auction', 'left'));
     }
 
     public function create(Request $data){

@@ -17,7 +17,7 @@
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
          <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
-         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>Nerd born of May.Nerd born of May.Nerd born of May.Nerd born of May.</span></p>
+         <p><i class="fa fa-list-alt fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
         </div>
 
       </div>
@@ -44,14 +44,12 @@
           <h6 class="markit-opacity"></h6>
           <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
         </div>
-      </div>
-      <br>
-      <br>
-
+        <br>
+        <br>
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-          <span class="markit-right markit-opacity">1 min</span>
+          <span class="markit-right markit-opacity">{{$post->updated_at->diffForHumans()}}</span>
           <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
           <h6>Rating: 5 Immortal Pearls</h6>
           <hr class="markit-clear">
@@ -61,12 +59,14 @@
               <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$post->image_path)}}" alt="Item Photo">
             </div>
             <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>{{$post->description}}</p>
             </div>
           </div>
 
           <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
+          {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Go to Auction</a>
+         
         </div>
       @empty
       @endforelse
@@ -74,6 +74,7 @@
       
     <!-- End Middle Column -->
     </div>
+  </div>
     
     <!-- Right Column -->
     <div class="markit-col m2">

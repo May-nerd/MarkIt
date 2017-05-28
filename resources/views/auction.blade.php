@@ -13,8 +13,8 @@
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
-                  <p>Auction item  by: <span><a href="" class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile">John Doe</a></span></p>
+                  <p>Item name: <span class="protrude">{{$auction->item_name}}</span></p>
+                  <p>Auction item  by: <span><a href="" class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile">{{$auction->user->fname}} {{$auction->user->lname}}</a></span></p>
                   <p>
                     Description: <br>
                     <span>{{$auction->description}}</span>
@@ -58,22 +58,26 @@
                     <table class="table">
                       <tr>
                          <th>Name</th>
-                         <th>Bidded at</th>
-                         <th>Reputation</th>
+                         <th>Marked at</th>
+                         {{-- <th>Reputation</th> --}}
                          <th>Amount</th>
+                         <th>Contact Information</th>
                       </tr>
-                      <tr>
-                        <td>Timmy Thompson Clarke</td>
-                        <td>January 21, 2029</td>
-                        <td>4.9 stars</td>
-                        <td>200 BitCoins</td>
-                      </tr>
-                      <tr>
-                        <td>Jennifer Doe</td>
-                        <td>January 22, 2029</td>
-                        <td>3.9 stars</td>
-                        <td>500 BitCoins</td>
-                      </tr>
+                      
+                      @forelse($auction->marks as $mark)
+                        <tr>
+                          <td>{{$mark->user->fname}} {{$mark->user->lname}}</td>
+                          <td>{{$mark->user->created_at->diffForHumans()}}</td>
+{{--                           <td>4.9 stars</td> --}}
+                          <td>Php {{$mark->amount}}</td>
+                          <td>asd</td>
+                        </tr>
+                      @empty
+                      @endforelse
+
+
+
+                      
                     </table>
                   </div>
               </div>
@@ -89,7 +93,7 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>6 Days, 23 Hours left</p>
+          <p>Ends <span class="text-success">{{$left->diffForHumans()}}</span>  </p>
           <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
           <p>Sat, 27 May 2017</p>
         </div>
@@ -97,15 +101,15 @@
       <br>
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Number of Bids</p>
-          <p><strong>8</strong></p>
+          <p>Number of Marks</p>
+          <p><strong>{{$auction->marks->count()}}</strong></p>
         </div>
       </div>
       <br>
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Average Bid</p>
-          <p><strong>400 BitCoins</strong></p>
+          <p>Minimum Mark</p>
+          <p><strong>Php {{$auction->min_bid}}</strong></p>
         </div>
       </div>
       <br>
