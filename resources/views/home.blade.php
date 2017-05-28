@@ -16,7 +16,7 @@
          <hr>
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
-         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
+         
         </div>
 
       </div>
@@ -99,8 +99,9 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
+                <div class="col-md-6 col-md-offset-4">
+                  <a class="btn btn-success" href="/auction/{{ Auth::user()->username }}/edit">CREATE AN AUCTION</a>
+               </div>
             </div>
           </div>
         </div>
