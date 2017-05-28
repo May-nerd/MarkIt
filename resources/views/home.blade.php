@@ -114,9 +114,9 @@
           <h6>Rating: 5 Immortal Pearls</h6>
           <hr class="markit-clear">
           <div class="markit-row-padding">
-            <p class="item-name">Qilin Horns</p>
+            <p class="item-name">{{ucwords($post->item_name)}}</p>
             <div class="markit-half">
-              <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
+              <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$post->image_path)}}" alt="Item Photo">
             </div>
             <div class="markit-half">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>

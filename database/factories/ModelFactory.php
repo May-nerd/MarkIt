@@ -25,8 +25,8 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
         'username' => $faker->word,
         'bio' => $faker->paragraph(10),
-        'profilepicture' => "fd01343d8cc267c73907fc55b6198dab.jpeg",
-        'profileextension' => "jpeg"
+        'profilepicture' => "dd194d116d5605b352ae64286060fef9.png",
+        'profileextension' => "png"
     ];
 });
 
@@ -37,8 +37,8 @@ $factory->define(App\Auction::class, function (Faker\Generator $faker) {
         'item_name' => $faker->word,
         'description' => $faker->paragraph(1),
         'min_bid' => $faker->numberBetween($min=50000, $max = 2000000),
-        'image_path' => "fd01343d8cc267c73907fc55b6198dab.jpeg",
-        'image_extension' => "jpeg",
+        'image_path' => "dca9e680aa3a4dc72c5133252b2dfac2.png",
+        'image_extension' => "png",
         'auction_days' => $faker->numberBetween($min=1, $max = 7),
         'is_sold' => $faker->numberBetween($min=0, $max = 1),
         'sold_id' => NULL
