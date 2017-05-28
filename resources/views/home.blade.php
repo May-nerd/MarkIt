@@ -114,7 +114,7 @@
               <p>{{$post->description}}</p>
             </div>
           </div>
-          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark(<span id="mark{{ $post->id }}">5</span>)</button>
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
           <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
         </div>
       @empty
