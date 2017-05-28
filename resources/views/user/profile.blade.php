@@ -57,7 +57,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+       <button type="button" class="btn btn-primary"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <!-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i> Unmark<span></span></button> -->
         <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>
 
@@ -76,7 +77,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <!-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i> Unmark<span></span></button> -->
         <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>      
     <!-- End Middle Column -->
