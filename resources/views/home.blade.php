@@ -17,6 +17,7 @@
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
          <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>Nerd born of May.Nerd born of May.Nerd born of May.Nerd born of May.</span></p>
         </div>
 
       </div>
@@ -87,20 +88,15 @@
     
     <!-- Middle Column -->
     <div class="markit-col m7">
-    
-      <div class="markit-col m12">
-          <!-- <div class="markit-card-2 markit-round markit-white"> -->
-            <div class="markit-container">
-              <h6 class="markit-opacity"></h6>
-                <!-- <div class="col-md-6 col-md-offset-4"> -->
-                  <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
-                <!-- </div> -->
-            <!-- </div> -->
-          </div>
-        </div>
-        <br>
-        <br>
 
+      <div class="markit-col m12">
+        <div class="markit-container">
+          <h6 class="markit-opacity"></h6>
+          <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
+        </div>
+      </div>
+      <br>
+      <br>
 
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>

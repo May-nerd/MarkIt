@@ -87,21 +87,14 @@
     
     <!-- Middle Column -->
     <div class="markit-col m7">
-    
-      <!-- <div class="markit-row-padding"> -->
         <div class="markit-col m12">
-          <!-- <div class="markit-card-2 markit-round markit-white"> -->
-            <div class="markit-container">
-              <h6 class="markit-opacity"></h6>
-                <!-- <div class="col-md-6 col-md-offset-4"> -->
-                  <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
-                <!-- </div> -->
-            <!-- </div> -->
+          <div class="markit-container">
+            <h6 class="markit-opacity"></h6>
+            <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
           </div>
         </div>
         <br>
         <br>
-      <!-- </div> -->
       
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
@@ -147,14 +140,14 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
+          <p>Remember the Bids:</p>
+          <img src="/uploads/qilin.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Qilin Horns</strong></p>
           <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+          <p><button class="markit-button markit-block markit-theme-l4">Go to Auction</button></p>
         </div>
       </div>
-      <br>      
+      <br>     
     <!-- End Right Column -->
     </div>
     
