@@ -62,8 +62,8 @@
           </div>
 
 
-          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
-          {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
+          {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Go to Auction</a>
          
 
@@ -116,7 +116,6 @@ function myFunction(id) {
         x.previousElementSibling.className.replace(" markit-theme-d1", "");
     }
 }
-
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
     var x = document.getElementById("navDemo");
@@ -133,4 +132,3 @@ function openNav() {
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
 @endpush
-
