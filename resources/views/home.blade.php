@@ -45,8 +45,6 @@
           <h6 class="markit-opacity"></h6>
           <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
         </div>
-        <br>
-        <br>
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
