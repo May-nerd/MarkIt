@@ -14,14 +14,18 @@
          <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>-
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
         </div>
 
       </div>
       <br>
-
-      <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-4">
+            <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+          </div>
+        </div>
       <br/>
       
       <!-- Accordion -->
