@@ -99,50 +99,35 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insret tagline with anther tag</p>
+              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
               <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
             </div>
           </div>
         </div>
       </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
-        <hr class="markit-clear">
-        <div class="markit-row-padding">
-          <p class="item-name">Qilin Horns</p>
-          <div class="markit-half">
-            <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
-          </div>
-          <div class="markit-half">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-        </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
-      </div>
 
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">8 min</span>
-        <h4>Micah Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
-        <hr class="markit-clear">
-        <div class="markit-row-padding">
-          <p class="item-name">Drop of Minion's Might</p>
-          <div class="markit-half">
-            <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
+      @forelse ($posts as $post)
+        <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
+          <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
+          <span class="markit-right markit-opacity">1 min</span>
+          <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
+          <h6>Rating: 5 Immortal Pearls</h6>
+          <hr class="markit-clear">
+          <div class="markit-row-padding">
+            <p class="item-name">Qilin Horns</p>
+            <div class="markit-half">
+              <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
+            </div>
+            <div class="markit-half">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
           </div>
-          <div class="markit-half">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
-      </div>
+      @empty
+      @endforelse
+
       
     <!-- End Middle Column -->
     </div>
