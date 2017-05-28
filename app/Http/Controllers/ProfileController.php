@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -18,7 +19,21 @@ class ProfileController extends Controller
     }
 
     public function edit($username){
-    	$user = User::whereUsername($username)->first();
-    	return view('user.profile', compact('user'));
+    	return view('user.edit');
+    }
+
+    public function update(Request $request, $username){
+  		$user = Auth::user();
+  		$user -> fname = $request->get('fname');
+   		$user -> lname = $request->get('lname');
+  		$user -> town = $request->get('town');
+  		$user -> province = $request->get('province');
+  		$user -> email = $request->get('email');
+  		$user -> province = $request->get('province');
+  		$user -> bio = $request->get('bio');
+  		$user -> password = bcrypt($request->get('password'));
+  		$user -> save();
+ 
+  		return redirect('/profile/'.$user->username);
     }
 }
