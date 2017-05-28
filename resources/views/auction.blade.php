@@ -29,8 +29,10 @@
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding markit-center">
-              <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
-            </div>
+              <button type="button" class="btn btn-success pull-left"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
+
+              <p class="pull-right"><strong>Bid Amount</strong> <input type="text" name="bidamount" id="bidamount"/> 
+            </div></p>
           </div>
         </div>
       </div>
