@@ -19,12 +19,8 @@
 
          <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>Nerd born of May.Nerd born of May.Nerd born of May.Nerd born of May.</span></p>
-
         </div>
-
       </div>
-
-      
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
