@@ -23,8 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = App\Auction::get();
-        // return $posts;
+        $posts = App\Auction::orderby('desc')->paginate(10);
         return view('home', compact('posts'));
     }
+
+
 }
