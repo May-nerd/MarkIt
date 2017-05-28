@@ -95,8 +95,9 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with anther tag</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add to MarkIt</button> 
+                <div class="col-md-6 col-md-offset-4">
+                  <a class="btn btn-success" href="/addauction">--- CREATE AN AUCTION ---</a>
+                </div>
             </div>
           </div>
         </div>
