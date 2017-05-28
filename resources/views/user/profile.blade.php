@@ -90,18 +90,20 @@
     <!-- Middle Column -->
     <div class="markit-col m7">
     
-      <div class="markit-row-padding">
+      <!-- <div class="markit-row-padding"> -->
         <div class="markit-col m12">
-          <div class="markit-card-2 markit-round markit-white">
-            <div class="markit-container markit-padding">
+          <!-- <div class="markit-card-2 markit-round markit-white"> -->
+            <div class="markit-container">
               <h6 class="markit-opacity"></h6>
-                <div class="col-md-6 col-md-offset-4">
-                  <a class="btn btn-success" href="/addauction">--- CREATE AN AUCTION ---</a>
-                </div>
-            </div>
+                <!-- <div class="col-md-6 col-md-offset-4"> -->
+                  <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
+                <!-- </div> -->
+            <!-- </div> -->
           </div>
         </div>
-      </div>
+        <br>
+        <br>
+      <!-- </div> -->
       
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
