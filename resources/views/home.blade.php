@@ -41,10 +41,11 @@
 
       <div class="markit-col m12">
 
-        <div class="markit-container">
+        <div class="markit-container" style="margin-top: -9px; margin-bottom: 16px;">
           <h6 class="markit-opacity"></h6>
           <a class="btn btn-primary" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
         </div>
+        
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">

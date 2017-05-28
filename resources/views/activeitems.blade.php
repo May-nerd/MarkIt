@@ -33,18 +33,6 @@
     
     <!-- Middle Column -->
     <div class="markit-col m7">
-    
-      <div class="markit-row-padding">
-        <div class="markit-col m12">
-          <div class="markit-card-2 markit-round markit-white">
-            <div class="markit-container markit-padding">
-              <h6 class="markit-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" class="markit-border markit-padding">Status: Feeling Blue</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i>  Post</button> 
-            </div>
-          </div>
-        </div>
-      </div>
       
       <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
