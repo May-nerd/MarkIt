@@ -47,19 +47,19 @@
              <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/1.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/3.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/4.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/5.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/fjords.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/6.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
          </div>
           </div>
@@ -110,7 +110,7 @@
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
           <span class="markit-right markit-opacity">1 min</span>
-          <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
+          <h4><a class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile" href="">{{$post->user->fname}} {{$post->user->lname}}</a></h4>
           <h6>Rating: 5 Immortal Pearls</h6>
           <hr class="markit-clear">
           <div class="markit-row-padding">
