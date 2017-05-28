@@ -16,8 +16,10 @@
          <hr>
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
-         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
-         <p><i class="fa fa-list-alt fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
+
+         <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>Nerd born of May.Nerd born of May.Nerd born of May.Nerd born of May.</span></p>
+
         </div>
 
       </div>
@@ -31,7 +33,6 @@
         </div>      
       </div>
       <br>
-      
     <!-- End Left Column -->
     </div>
     
@@ -49,9 +50,11 @@
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
+
           <span class="markit-right markit-opacity">{{$post->updated_at->diffForHumans()}}</span>
           <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
-          <h6>Rating: 5 Immortal Pearls</h6>
+          {{-- <h6>Rating: 5 Immortal Pearls</h6> --}}
+
           <hr class="markit-clear">
           <div class="markit-row-padding">
             <p class="item-name">{{ucwords($post->item_name)}}</p>
@@ -63,13 +66,22 @@
             </div>
           </div>
 
+
           <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
           {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Go to Auction</a>
          
+
         </div>
       @empty
       @endforelse
+
+      <div class="markit-row-padding text-center">
+        <div>
+          {{$posts->links()}}
+        </div>
+        
+      </div>
 
       
     <!-- End Middle Column -->

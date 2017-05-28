@@ -16,7 +16,7 @@
          <hr>
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
-         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
+         <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
         </div>
       </div>
       <br>
@@ -46,7 +46,7 @@
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">1 min</span>
         <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
+        <!-- <h6>Rating: 5 Immortal Pearls</h6> -->
         <hr class="markit-clear">
         <div class="markit-row-padding">
           <p class="item-name">Qilin Horns</p>
@@ -57,7 +57,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+       <button type="button" class="btn btn-primary"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <!-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i> Unmark<span></span></button> -->
         <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>
 
@@ -65,7 +66,7 @@
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">8 min</span>
         <h4>Micah Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
+        <!-- <h6>Rating: 5 Immortal Pearls</h6> -->
         <hr class="markit-clear">
         <div class="markit-row-padding">
           <p class="item-name">Drop of Minion's Might</p>
@@ -76,7 +77,8 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
         </div>
-        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <button type="button" class="btn btn-primary"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <!-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i> Unmark<span></span></button> -->
         <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
       </div>      
     <!-- End Middle Column -->
