@@ -24,5 +24,7 @@ class DatabaseSeeder extends Seeder
                    'profileextension' => "jpeg"
         ]);
         factory(App\User::class, 100)->create();
+        factory(App\Auction::class, 50)->create();
+        factory(App\Mark::class, 500)->create();
     }
 }
