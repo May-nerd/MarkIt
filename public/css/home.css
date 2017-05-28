@@ -56,7 +56,8 @@ body{
 	font-size: 1.5em;
 }
 .user-icon{
-	margin-top: 1px;
+	/*margin-top: 1px;*/
+	margin-top: -2px;
 	height: 60px;
 }
 .remove-anchor-design:hover{
@@ -66,6 +67,7 @@ body{
 .item-name{
 	font-size: 150%;
 	font-weight: bold;
-	margin-top: -20px;
+	/*margin-top: -20px;*/
+	margin-top: -10px;	
 }
 
