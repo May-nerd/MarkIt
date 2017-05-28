@@ -4,86 +4,8 @@
 <div class="markit-container markit-content" style="max-width:1400px;margin-top:80px">    
   <!-- The Grid -->
   <div class="markit-row">
-    <!-- Left Column -->
-    <div class="markit-col m3">
-      <!-- Profile -->
-      <div class="markit-card-2 markit-round markit-white">
-        <div class="markit-container">
-         <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
-         <hr>
-         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> Kalibo, Aklan</p>
-         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
-        </div>
-      </div>
-      <br>
-      
-      <!-- Accordion -->
-      <div class="markit-card-2 markit-round">
-        <div class="markit-white">
-          <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
-          <div id="Demo1" class="markit-hide markit-container">
-            <p>Some text..</p>
-          </div>
-          <button onclick="myFunction('Demo2')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-calendar-check-o fa-fw markit-margin-right"></i> My Events</button>
-          <div id="Demo2" class="markit-hide markit-container">
-            <p>Some other text..</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-users fa-fw markit-margin-right"></i> My Photos</button>
-          <div id="Demo3" class="markit-hide markit-container">
-         <div class="markit-row-padding">
-         <br>
-           <div class="markit-half">
-             <img src="/w3images/lights.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/fjords.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-         </div>
-          </div>
-        </div>      
-      </div>
-      <br>
-      
-      <!-- Interests --> 
-      <div class="markit-card-2 markit-round markit-white markit-hide-small">
-        <div class="markit-container">
-          <p>Interests</p>
-          <p>
-            <span class="markit-tag markit-small markit-theme-d5">News</span>
-            <span class="markit-tag markit-small markit-theme-d4">W3Schools</span>
-            <span class="markit-tag markit-small markit-theme-d3">Labels</span>
-            <span class="markit-tag markit-small markit-theme-d2">Games</span>
-            <span class="markit-tag markit-small markit-theme-d1">Friends</span>
-            <span class="markit-tag markit-small markit-theme">Games</span>
-            <span class="markit-tag markit-small markit-theme-l1">Friends</span>
-            <span class="markit-tag markit-small markit-theme-l2">Food</span>
-            <span class="markit-tag markit-small markit-theme-l3">Design</span>
-            <span class="markit-tag markit-small markit-theme-l4">Art</span>
-            <span class="markit-tag markit-small markit-theme-l5">Photos</span>
-          </p>
-        </div>
-      </div>
-      <br>
-    
-    <!-- End Left Column -->
-    </div>
-    
     <!-- Middle Column -->
-    <div class="markit-col m7">
+    <div class="markit-col m10">
     
       <div class="markit-row-padding">
         <div class="markit-col m12">
@@ -107,7 +29,7 @@
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding markit-center">
-              <button type="button" class="bid-mark "><strong>Mark this Item</strong></button>
+              <button type="button" class="btn btn-success"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
             </div>
           </div>
         </div>
