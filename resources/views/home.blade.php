@@ -136,11 +136,11 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
+          <p>Remember the Bids:</p>
+          <img src="/uploads/qilin.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Qilin Horns</strong></p>
           <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+          <p><button class="markit-button markit-block markit-theme-l4">Go to Auction</button></p>
         </div>
       </div>
       <br>      

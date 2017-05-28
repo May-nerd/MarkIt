@@ -10,23 +10,21 @@
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
 
-         <h4 class="markit-center">{{ $user->fname." ".$user->lname }}</h4>
-         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".$user->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
+         <h4 class="markit-center">{{ Auth::user()->fname." ".Auth::user()->lname }}</h4>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>-
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower($user->town)) }}, {{ucwords(strtolower($user->province)) }}</p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
         </div>
-
       </div>
       <br>
-
-      <a class="btn btn-primary" href="/profile/{{ $user->username }}/edit">Edit Profile</a>
-      <br/>
       
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
+          <button class="markit-button markit-block markit-theme-l1 markit-left-align" data-toggle="tooltip" title="Edit Profile"><i class="fa fa-pencil fa-fw markit-margin-right"></i><a href="/profile/{{ Auth::user()->username }}/edit" class="remove-anchor-design">Edit Profile</a></button>
           <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
           <div id="Demo1" class="markit-hide markit-container">
             <p>Some text..</p>
@@ -43,19 +41,19 @@
              <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/1.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/3.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/4.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/5.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/w3images/fjords.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/uploads/6.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
          </div>
           </div>
