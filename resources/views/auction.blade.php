@@ -13,7 +13,8 @@
             <div class="markit-container markit-padding">
               <div class="panel panel-default">
                 <div class="panel-body">
-                  <p>Item name: <span class="protrude">{{$auction->item_name}}</span></p>
+                  <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
+                  <p>Auction item  by: <span><a href="" class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile">John Doe</a></span></p>
                   <p>
                     Description: <br>
                     <span>{{$auction->description}}</span>

@@ -23,60 +23,8 @@
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
-          <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
-          <div id="Demo1" class="markit-hide markit-container">
-            <p>Some text..</p>
-          </div>
-          <button onclick="myFunction('Demo2')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-calendar-check-o fa-fw markit-margin-right"></i> My Events</button>
-          <div id="Demo2" class="markit-hide markit-container">
-            <p>Some other text..</p>
-          </div>
-          <button onclick="myFunction('Demo3')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-users fa-fw markit-margin-right"></i> My Photos</button>
-          <div id="Demo3" class="markit-hide markit-container">
-         <div class="markit-row-padding">
-         <br>
-           <div class="markit-half">
-             <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/mountains.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/forest.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-           <div class="markit-half">
-             <img src="/w3images/fjords.jpg" style="width:100%" class="markit-margin-bottom">
-           </div>
-         </div>
-          </div>
+          <a class="markit-button markit-block markit-theme-l1 markit-left-align remove-anchor-design" data-toggle="tooltip" title="Edit Profile" href="/profile/{{ Auth::user()->username }}/edit"><i class="fa fa-pencil fa-fw markit-margin-right"> Edit Profile</i></a>
         </div>      
-      </div>
-      <br>
-      
-      <!-- Interests --> 
-      <div class="markit-card-2 markit-round markit-white markit-hide-small">
-        <div class="markit-container">
-          <p>Interests</p>
-          <p>
-            <span class="markit-tag markit-small markit-theme-d5">News</span>
-            <span class="markit-tag markit-small markit-theme-d4">W3Schools</span>
-            <span class="markit-tag markit-small markit-theme-d3">Labels</span>
-            <span class="markit-tag markit-small markit-theme-d2">Games</span>
-            <span class="markit-tag markit-small markit-theme-d1">Friends</span>
-            <span class="markit-tag markit-small markit-theme">Games</span>
-            <span class="markit-tag markit-small markit-theme-l1">Friends</span>
-            <span class="markit-tag markit-small markit-theme-l2">Food</span>
-            <span class="markit-tag markit-small markit-theme-l3">Design</span>
-            <span class="markit-tag markit-small markit-theme-l4">Art</span>
-            <span class="markit-tag markit-small markit-theme-l5">Photos</span>
-          </p>
-        </div>
       </div>
       <br>
     
@@ -160,11 +108,10 @@
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
         <div class="markit-container">
-          <p>Upcoming Events:</p>
-          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
-          <p><strong>Holiday</strong></p>
-          <p>Friday 15:00</p>
-          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+          <p>Nearest Auction to End:</p>
+          <p>6 Days, 23 Hours left</p>
+          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
+          <p>Sat, 27 May 2017</p>
         </div>
       </div>
       <br>      

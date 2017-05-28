@@ -36,3 +36,7 @@ span.protrude{
 .bid-mark:hover{
 	background-color: #008CBA;
 }
+.remove-anchor-design:hover{
+    text-decoration: none;
+    color: black;
+}

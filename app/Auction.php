@@ -36,4 +36,8 @@ class Auction extends Model
         return $this->belongsTo('App\User', 'poster_id');
     }
 
+    public function marks(){
+        return $this->hasMany('App\Mark');
+    }
+
 }
