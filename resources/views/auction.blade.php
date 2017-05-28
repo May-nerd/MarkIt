@@ -106,7 +106,8 @@
       <div class="markit-row-padding">
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
-            <div class="markit-container markit-padding">
+            <div class="markit-container markit-padding markit-center">
+              <button type="button" class="bid-mark "><strong>Mark this Item</strong></button>
             </div>
           </div>
         </div>
