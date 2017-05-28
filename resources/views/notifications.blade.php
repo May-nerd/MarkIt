@@ -8,72 +8,38 @@
 
 		<div class="notifications-box alert alert-dismissable fade in">
 			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			<div class="text-container">
-			 	<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-				<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+			<div class="media">
+				<img class="media-object pull-left notif-icon" src="/uploads/profile-img.jpg" alt="profilephoto">
+				<div class="media-body">
+					<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
+						<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+				</div>
 			</div>
-			
-		</div>
-
-
-		<div class="notifications-box alert alert-dismissable fade in">
-			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			  
-			<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-			<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
 		</div>
 
 		<div class="notifications-box alert alert-dismissable fade in">
 			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			  
-			<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-			<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+			<div class="media">
+				<img class="media-object pull-left notif-icon" src="/uploads/profile-img.jpg" alt="profilephoto">
+				<div class="media-body">
+					<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
+						<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+				</div>
+			</div>
 		</div>
 
 		<div class="notifications-box alert alert-dismissable fade in">
 			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			  
-			<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-			<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+			<div class="media">
+				<img class="media-object pull-left notif-icon" src="/uploads/profile-img.jpg" alt="profilephoto">
+				<div class="media-body">
+					<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
+						<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
+				</div>
+			</div>
 		</div>
 
-		<div class="notifications-box alert alert-dismissable fade in">
-			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			  
-			<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-			<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
-		</div>
-
-		<div class="notifications-box alert alert-dismissable fade in">
-			<a href="#" class="close close-btn" data-dismiss="alert" aria-label="close">&times;</a>
-
-			<p class="notif-img">
-				<img src="/uploads/profile-img.jpg" class="img-circle">
-			</p>
-			  
-			<p class="notif-msg"> You have a new notification from a customer. <a href="#">Click here to view.</a></p>
-			<p class="notif-time"> <span class="glyphicon glyphicon-ok"> </span> 39 minutes ago  </p>
-		</div>
+		
 	</div>
 
 
