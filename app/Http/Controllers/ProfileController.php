@@ -22,6 +22,11 @@ class ProfileController extends Controller
     	return view('user.edit');
     }
 
+    // public function index(){
+    // 	$user = User::orderedby('desc')->paginate(10);
+    // 	return view('user.profile', compact('user'));
+    // }
+
     public function update(Request $request, $username){
   		$user = Auth::user();
   		$user -> fname = $request->get('fname');

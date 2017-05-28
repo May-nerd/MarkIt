@@ -95,8 +95,8 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insret tagline with anther tag</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
+              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with anther tag</p>
+              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add to MarkIt</button> 
             </div>
           </div>
         </div>
@@ -138,8 +138,7 @@
         </div>
         <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
         <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
-      </div>
-      
+      </div>      
     <!-- End Middle Column -->
     </div>
     
