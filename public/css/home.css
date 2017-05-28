@@ -61,6 +61,7 @@ body{
 }
 .remove-anchor-design:hover{
 	text-decoration: none;
+	color: black;
 }
 .item-name{
 	font-size: 150%;

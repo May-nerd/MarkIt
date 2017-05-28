@@ -20,17 +20,11 @@
         </div>
 
       </div>
-      <br>
-        <div class="form-group">
-          <div class="col-md-6 col-md-offset-4">
-            <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
-          </div>
-        </div>
-      <br/>
-      
+      <br>      
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
+          <button class="markit-button markit-block markit-theme-l1 markit-left-align" data-toggle="tooltip" title="Edit Profile"><i class="fa fa-pencil fa-fw markit-margin-right"></i><a href="/profile/{{ Auth::user()->username }}/edit" class="remove-anchor-design">Edit Profile</a></button>
           <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
           <div id="Demo1" class="markit-hide markit-container">
             <p>Some text..</p>
