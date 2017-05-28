@@ -14,6 +14,7 @@
               <div class="panel panel-default">
                 <div class="panel-body">
                   <p>Item name: <span class="protrude">Immortal Jade of the Celestial Qilin</span></p>
+                  <p>Auction item  by: <span><a href="" class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile">John Doe</a></span></p>
                   <p>
                     Description: <br>
                     <span>Lorem from database Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
