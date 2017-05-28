@@ -89,11 +89,11 @@
   </div>
     
     <!-- Right Column -->
-    <div class="markit-col m2">
+{{--     <div class="markit-col m2">
       <form role="form" method="POST" action="{{ url('/createauction') }}" enctype="multipart/form-data">
         <div class="markit-card-2 markit-round markit-white markit-center">
           <div class="markit-container">
-            <p>Remember the Bids:</p>
+            <p>Recent the Mark:</p>
             <img src="/uploads/qilin.jpg" alt="Forest" style="width:100%;">
             <p><strong>Qilin Horns</strong></p>
             <p>Friday 15:00</p>
@@ -103,7 +103,7 @@
       </form>
       <br>      
     <!-- End Right Column -->
-    </div>
+    </div> --}}
     
   <!-- End Grid -->
   </div>

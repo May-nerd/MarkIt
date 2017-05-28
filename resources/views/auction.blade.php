@@ -63,7 +63,12 @@
                          <th>Marked at</th>
                          {{-- <th>Reputation</th> --}}
                          <th>Amount</th>
-                         <th>Contact Information</th>
+                        
+                        @if (Auth::user()->id == $auction->poster_id)
+                          <th>Contact Information</th>
+                        @endif
+                         
+                      
                       </tr>
                       
                       @forelse($auction->marks as $mark)
@@ -72,7 +77,10 @@
                           <td>{{$mark->user->created_at->diffForHumans()}}</td>
 {{--                           <td>4.9 stars</td> --}}
                           <td>Php {{$mark->amount}}</td>
-                          <td>asd</td>
+                          @if (Auth::user()->id == $auction->poster_id)
+                            <td>{{$mark->user->email}}</td>
+                          @endif
+                          
                         </tr>
                       @empty
                       @endforelse
