@@ -14,14 +14,18 @@
          <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>-
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+         <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p>
         </div>
 
       </div>
       <br>
-
-      <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-4">
+            <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+          </div>
+        </div>
       <br/>
       
       <!-- Accordion -->
@@ -95,12 +99,13 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-              <p contenteditable="true" class="markit-border markit-padding">Insret tagline with anther tag</p>
+              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
               <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
             </div>
           </div>
         </div>
       </div>
+
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
@@ -122,8 +127,6 @@
         </div>
       @empty
       @endforelse
-
-
 
       
     <!-- End Middle Column -->

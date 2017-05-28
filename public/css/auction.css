@@ -7,10 +7,6 @@ span.protrude{
     border-bottom: solid 1px #006600;
     text-transform: uppercase;
 }
-/*.float-details{
-	float: left;
-	overflow: auto;
-}*/
 .posted-image{
 	max-height: 350px;
 	width: 100%;
@@ -24,4 +20,19 @@ span.protrude{
 
 .mark-btn{
 	margin: 1em 16px;
+}
+.bid-mark{
+	width: 50%;
+	border-radius: 4px;
+	background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.bid-mark:hover{
+	background-color: #008CBA;
 }

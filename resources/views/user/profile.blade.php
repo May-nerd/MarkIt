@@ -3,23 +3,26 @@
 @section('content')
 <div class="markit-container markit-content" style="max-width:1400px;margin-top:80px">    
   <!-- The Grid -->
-	<div class="markit-row">
+  <div class="markit-row">
     <!-- Left Column -->
     <div class="markit-col m3">
       <!-- Profile -->
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
 
-         <h4 class="markit-center">{{ Auth::user()->fname." ".Auth::user()->lname }}</h4>
-         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
+         <h4 class="markit-center">{{ $user->fname." ".$user->lname }}</h4>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".$user->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>-
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower($user->town)) }}, {{ucwords(strtolower($user->province)) }}</p>
         </div>
 
       </div>
       <br>
+
+      <a class="btn btn-primary" href="/profile/{{ $user->username }}/edit">Edit Profile</a>
+      <br/>
       
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
@@ -83,175 +86,109 @@
     
     <!-- End Left Column -->
     </div>
-    <div class="markit-col m1">
-    	<p></p>
-    </div>
+    
     <!-- Middle Column -->
     <div class="markit-col m7">
-	     <div class="panel panel-default">
-	        <div class="panel-heading">Register</div>
-	        <div class="panel-body">
-	            <form class="form-horizontal" role="form" method="POST" action="{{ url('/register') }}" enctype="multipart/form-data">
-	                {{ csrf_field() }}
-	                
-	                <div class="form-group{{ $errors->has('profilepicture') ? ' has-error' : '' }}">
-	                    <label for="profilepicture" class="col-md-4 control-label">Profile Picture</label>
+    
+      <div class="markit-row-padding">
+        <div class="markit-col m12">
+          <div class="markit-card-2 markit-round markit-white">
+            <div class="markit-container markit-padding">
+              <h6 class="markit-opacity"></h6>
+              <p contenteditable="true" class="markit-border markit-padding">Insret tagline with anther tag</p>
+              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
+        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
+        <span class="markit-right markit-opacity">1 min</span>
+        <h4>John Doe</h4>
+        <h6>Rating: 5 Immortal Pearls</h6>
+        <hr class="markit-clear">
+        <div class="markit-row-padding">
+          <p class="item-name">Qilin Horns</p>
+          <div class="markit-half">
+            <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
+          </div>
+          <div class="markit-half">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
+      </div>
 
-	                    <div class="col-md-6">
-	                        
-	                        <input id="profilepicture" type="file" name="profilepicture" value="{{ Auth::user()->profilepicture }}" required>
-
-	                        @if ($errors->has('profilepicture'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('profilepicture') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-
-	                <div class="form-group{{ $errors->has('fname') ? ' has-error' : '' }}">
-	                    <label for="fname" class="col-md-4 control-label">First Name</label>
-
-	                    <div class="col-md-6">
-	                        <input id="fname" type="text" class="form-control" name="fname" value="{{ Auth::user()->fname }}" required autofocus>
-
-	                        @if ($errors->has('fname'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('fname') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-
-	                <div class="form-group{{ $errors->has('lname') ? ' has-error' : '' }}">
-	                    <label for="lname" class="col-md-4 control-label">Last Name</label>
-
-	                    <div class="col-md-6">
-	                        <input id="lname" type="text" class="form-control" name="lname" value="{{ Auth::user()->lname }}" required autofocus>
-
-	                        @if ($errors->has('lname'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('lname') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('town') ? ' has-error' : '' }}">
-	                    <label for="town" class="col-md-4 control-label">Town</label>
-
-	                    <div class="col-md-6">
-	                        <input id="town" type="text" class="form-control" name="town" value="{{ Auth::user()->town }}" required autofocus>
-
-	                        @if ($errors->has('town'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('town') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('province') ? ' has-error' : '' }}">
-	                    <label for="province" class="col-md-4 control-label">Province</label>
-
-	                    <div class="col-md-6">
-	                        <input id="province" type="text" class="form-control" name="province" value="{{ Auth::user()->province }}" required autofocus>
-
-	                        @if ($errors->has('province'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('province') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-	                    <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-	                    <div class="col-md-6">
-	                        <input id="email" type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" required>
-
-	                        @if ($errors->has('email'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('email') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-	                    <label for="username" class="col-md-4 control-label"> Username</label>
-
-	                    <div class="col-md-6">
-	                        <input id="username" type="username" class="form-control" name="username" value="{{ Auth::user()->username }}" required>
-
-	                        @if ($errors->has('username'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('username') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-	                    <label for="password" class="col-md-4 control-label">Password</label>
-
-	                    <div class="col-md-6">
-	                        <input id="password" type="password" class="form-control" name="password" required>
-
-	                        @if ($errors->has('password'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('password') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-	                <div class="form-group">
-	                    <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-
-	                    <div class="col-md-6">
-	                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-	                    </div>
-	                </div>
-
-	                <div class="form-group{{ $errors->has('bio') ? ' has-error' : '' }}">
-	                    <label for="bio" class="col-md-4 control-label">Short Description</label>
-
-	                    <div class="col-md-6">
-
-	                        <textarea id="bio" type="text" class="form-control" name="bio" required autofocus>{{ Auth::user()->bio }}</textarea>
-
-	                        @if ($errors->has('bio'))
-	                            <span class="help-block">
-	                                <strong>{{ $errors->first('bio') }}</strong>
-	                            </span>
-	                        @endif
-	                    </div>
-	                </div>
-
-
-	                <div class="form-group">
-	                    <div class="col-md-6 col-md-offset-4">
-	                        <a type="submit" class="btn btn-primary" href="/home">
-	                            Register
-	                        </a>
-	                    </div>
-	                </div>
-	            </form>
-	        </div>
-	    </div>	
+      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
+        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
+        <span class="markit-right markit-opacity">8 min</span>
+        <h4>Micah Doe</h4>
+        <h6>Rating: 5 Immortal Pearls</h6>
+        <hr class="markit-clear">
+        <div class="markit-row-padding">
+          <p class="item-name">Drop of Minion's Might</p>
+          <div class="markit-half">
+            <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
+          </div>
+          <div class="markit-half">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+        </div>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (3)</span></button>
+        <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
+      </div>
+      
+    <!-- End Middle Column -->
     </div>
     
-	    
-      
-	</div>
- </div>
+    <!-- Right Column -->
+    <div class="markit-col m2">
+      <div class="markit-card-2 markit-round markit-white markit-center">
+        <div class="markit-container">
+          <p>Upcoming Events:</p>
+          <img src="/w3images/forest.jpg" alt="Forest" style="width:100%;">
+          <p><strong>Holiday</strong></p>
+          <p>Friday 15:00</p>
+          <p><button class="markit-button markit-block markit-theme-l4">Info</button></p>
+        </div>
+      </div>
+      <br>      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("markit-show") == -1) {
+        x.className += " markit-show";
+        x.previousElementSibling.className += " markit-theme-d1";
+    } else { 
+        x.className = x.className.replace("markit-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" markit-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("markit-show") == -1) {
+        x.className += " markit-show";
+    } else { 
+        x.className = x.className.replace(" markit-show", "");
+    }
+}
+</script>
 @endsection
 
 @push('styles')
-<link rel="stylesheet" type="text/css" href="{{asset('css/profile.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
 @endpush
+
