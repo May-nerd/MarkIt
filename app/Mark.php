@@ -14,7 +14,7 @@ class Mark extends Model
      * @var array
      */
     protected $fillable = [
-        'amount'
+        'user_id', 'auction_id', 'amount'
     ];
 
     /**

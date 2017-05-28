@@ -18,7 +18,7 @@
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
 
          <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
-         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>Nerd born of May.Nerd born of May.Nerd born of May.Nerd born of May.</span></p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
 
         </div>
 
@@ -43,7 +43,7 @@
 
         <div class="markit-container">
           <h6 class="markit-opacity"></h6>
-          <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
+          <a class="btn btn-primary" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
         </div>
       @forelse ($posts as $post)
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
@@ -65,10 +65,10 @@
           </div>
 
 
-          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button>
+{{--           <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
-          <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Go to Auction</a>
-         
+          <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Marks (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</a>
+         {{-- <div class="markit-button markit-theme-d1 mark-btn"></div> --}}
 
         </div>
       @empty

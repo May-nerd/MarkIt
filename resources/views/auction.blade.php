@@ -25,18 +25,24 @@
           </div>
         </div>
       </div>
-      <br> <!--for the purpose of padding [lazy af, hands raised!]-->
-      <div class="markit-row-padding">
+ <!--for the purpose of padding [lazy af, hands raised!]-->
+{{--       <div class="markit-row-padding">
         <div class="markit-col m12">
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding markit-center">
-              <button type="button" class="btn btn-success pull-left"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
 
-              <p class="pull-right"><strong>Bid Amount</strong> <input type="text" name="bidamount" id="bidamount"/> 
-            </div></p>
+              <form action="">
+                <strong class="">Bid Amount </strong>
+                <input style="margin-top: 20px;" class="form-control" type="number" name="amount" id="bidamount" min="{{$auction->min_bid}}" max="" value="{{$auction->min_bid}}" /> 
+                <input type="hidden" name="auction_id" value="{{$auction->id}}">
+                <br />
+                  <button type="submit" name="submit" class="btn btn-success form-control"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
+              </form>
+
+            </div>
           </div>
         </div>
-      </div>
+      </div> --}}
       <br> <!--for the purpose of padding [lazy af, hands raised!]-->
       <div class="markit-row-padding">
         <div class="markit-col m12">
@@ -102,10 +108,11 @@
     <!-- Right Column -->
     <div class="markit-col m2">
       <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container">
+        <div class="markit-container"><br>
           <p>Ends <span class="text-success">{{$left->diffForHumans()}}</span>  </p>
-          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
-          <p>Sat, 27 May 2017</p>
+          <br>
+          {{-- <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button> --}}
+          {{-- <p>Sat, 27 May 2017</p> --}}
         </div>
       </div>
       <br>
@@ -122,6 +129,28 @@
           <p><strong>Php {{$auction->min_bid}}</strong></p>
         </div>
       </div>
+      <br>
+      
+      @if ($auction->marks->where('user_id', Auth::user()->id)->count() == 0 && (Auth::user()->id != $auction->poster_id))
+        <div class="markit-card-2 markit-round markit-white markit-center">
+          <div class="markit-container" style="padding-top: 20px; padding-bottom: 20px;">
+            <form class="form-horizontal" role="form" method="POST" action="{{ url('/createmark') }}">
+              {{ csrf_field() }}
+              <strong class="">Bid Amount </strong>
+              <input style="margin-top: 20px;" class="form-control" type="number" name="amount" id="bidamount" min="{{$auction->min_bid}}" max="" value="{{$auction->min_bid}}" /> 
+              <input type="hidden" name="auction_id" value="{{$auction->id}}">
+              <br />
+                <button type="submit" name="submit" class="btn btn-success form-control"><i class="glyphicon glyphicon-ok"></i><strong> Mark this Item</strong></button>
+                <br>
+            </form>
+          </div>
+        </div>
+      @endif
+      
+
+
+
+
       <br>
     <!-- End Right Column -->
     </div>

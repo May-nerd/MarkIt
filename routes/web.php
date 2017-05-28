@@ -31,6 +31,9 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/addauction',  'AuctionController@add');	
 	Route::get('/auction/{id}',  'AuctionController@show');	
 	Route::post('/createauction',  'AuctionController@create');	
+
+	Route::post('/createmark',  'MarkController@index');	
+
 	Route::get('/activeitems',  function () {
 	    return view('activeitems');
 	});
