@@ -110,7 +110,7 @@
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">1 min</span>
         <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
+        <h6>Rating: 5 stars</h6>
         <hr class="markit-clear">
         <div class="markit-row-padding">
           <p class="item-name">Qilin Horns</p>
@@ -129,7 +129,7 @@
         <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
         <span class="markit-right markit-opacity">8 min</span>
         <h4>Micah Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6>
+        <h6>Rating: 4 stars</h6>
         <hr class="markit-clear">
         <div class="markit-row-padding">
           <p class="item-name">Drop of Minion's Might</p>
