@@ -100,7 +100,7 @@
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
                 <div class="col-md-6 col-md-offset-4">
-                  <a class="btn btn-success" href="/auction/{{ Auth::user()->username }}/addauction">CREATE AN AUCTION</a>
+                  <a class="btn btn-success" href="/addauction">CREATE AN AUCTION</a>
                </div>
             </div>
           </div>
