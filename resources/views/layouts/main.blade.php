@@ -39,7 +39,7 @@
 	<div class="markit-top">
 		<div class="markit-bar markit-theme-d2 markit-left-align markit-large">
 			<a class="markit-bar-item markit-button markit-hide-medium markit-hide-large markit-right markit-padding-large markit-hover-white markit-large markit-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-			<a href="#" class="markit-bar-item markit-button markit-padding-large markit-theme-d4"><i class="fa fa-home markit-margin-right"></i>MarkIt</a>
+			<a href="/home" class="markit-bar-item markit-button markit-padding-large markit-theme-d4"><i class="fa fa-home markit-margin-right"></i>MarkIt</a>
 			<a href="/profile/{{Auth::user()->username}}" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Profile"><i class="fa fa-user"></i></a>
             <a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Active Items"><i class="glyphicon glyphicon-ok-circle"></i></a>
 			<a href="#" class="markit-bar-item markit-button markit-hide-small markit-padding-large markit-hover-white" title="Marked Items"><i class="fa fa-check"></i></a>
