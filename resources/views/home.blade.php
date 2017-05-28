@@ -14,12 +14,15 @@
          <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
+         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>-
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
         </div>
 
       </div>
       <br>
+
+      <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+      <br/>
       
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">

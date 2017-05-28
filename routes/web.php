@@ -26,7 +26,8 @@ Route::post('/registrationform', 'RegistrationController@index');
 
 Route::group(['middleware' => 'auth'], function(){
 	Route::get('/home', 'HomeController@index');
-	Route::get('/profile/{username}', 'ProfileController@profile');
+	Route::resource('/profile', 'ProfileController');
+
 
 	Route::get('/auction',  function () {
 	    return view('auction');
