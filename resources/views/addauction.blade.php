@@ -10,7 +10,7 @@
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
          <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}"  class="markit-circle" style="height:106px;width:106px" alt="Avatar"></p>
          <hr>
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> Kalibo, Aklan</p>
