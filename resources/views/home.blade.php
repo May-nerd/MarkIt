@@ -20,17 +20,11 @@
         </div>
 
       </div>
-      <br>
-        <div class="form-group">
-          <div class="col-md-6 col-md-offset-4">
-            <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
-          </div>
-        </div>
-      <br/>
-      
+      <br>      
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
+          <button class="markit-button markit-block markit-theme-l1 markit-left-align" data-toggle="tooltip" title="Edit Profile"><i class="fa fa-pencil fa-fw markit-margin-right"></i><a href="/profile/{{ Auth::user()->username }}/edit" class="remove-anchor-design">Edit Profile</a></button>
           <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
           <div id="Demo1" class="markit-hide markit-container">
             <p>Some text..</p>
@@ -120,10 +114,10 @@
               <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$post->image_path)}}" alt="Item Photo">
             </div>
             <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>{{$post->description}}</p>
             </div>
           </div>
-          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark(<span id="mark{{ $post->id }}">5</span>)</button>
           <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
         </div>
       @empty
@@ -131,6 +125,11 @@
 
       
     <!-- End Middle Column -->
+      <div class="markit-row-padding">
+        <div>
+              {{ $posts->links() }}         
+        </div>
+      </div>
     </div>
     
     <!-- Right Column -->
@@ -149,6 +148,7 @@
     </div>
     
   <!-- End Grid -->
+
   </div>
 
 <script>
