@@ -20,11 +20,17 @@
         </div>
 
       </div>
-      <br>      
+      <br>
+        <div class="form-group">
+          <div class="col-md-6 col-md-offset-4">
+            <a class="btn btn-primary" href="/profile/{{ Auth::user()->username }}/edit">Edit Profile</a>
+          </div>
+        </div>
+      <br/>
+      
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
-          <button class="markit-button markit-block markit-theme-l1 markit-left-align" data-toggle="tooltip" title="Edit Profile"><i class="fa fa-pencil fa-fw markit-margin-right"></i><a href="/profile/{{ Auth::user()->username }}/edit" class="remove-anchor-design">Edit Profile</a></button>
           <button onclick="myFunction('Demo1')" class="markit-button markit-block markit-theme-l1 markit-left-align"><i class="fa fa-circle-o-notch fa-fw markit-margin-right"></i> My Groups</button>
           <div id="Demo1" class="markit-hide markit-container">
             <p>Some text..</p>
@@ -41,19 +47,19 @@
              <img src="/uploads/2.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/uploads/1.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/uploads/3.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/mountains.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/uploads/4.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/forest.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/uploads/5.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
            <div class="markit-half">
-             <img src="/uploads/6.jpg" style="width:100%" class="markit-margin-bottom">
+             <img src="/w3images/fjords.jpg" style="width:100%" class="markit-margin-bottom">
            </div>
          </div>
           </div>
@@ -93,9 +99,8 @@
           <div class="markit-card-2 markit-round markit-white">
             <div class="markit-container markit-padding">
               <h6 class="markit-opacity"></h6>
-                <div class="col-md-6 col-md-offset-4">
-                  <a class="btn btn-success" href="/addauction">--- CREATE AN AUCTION ---</a>
-               </div>
+              <p contenteditable="true" class="markit-border markit-padding">Insert tagline with another tag</p>
+              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i> Add toMarkIt</button> 
             </div>
           </div>
         </div>
@@ -105,7 +110,7 @@
         <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
           <span class="markit-right markit-opacity">1 min</span>
-          <h4><a class="remove-anchor-design" data-toggle="tooltip" title="Visit Profile" href="">{{$post->user->fname}} {{$post->user->lname}}</a></h4>
+          <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
           <h6>Rating: 5 Immortal Pearls</h6>
           <hr class="markit-clear">
           <div class="markit-row-padding">
@@ -114,10 +119,10 @@
               <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$post->image_path)}}" alt="Item Photo">
             </div>
             <div class="markit-half">
-              <p>{{$post->description}}</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </div>
-          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark(<span id="mark{{ $post->id }}">5</span>)</button>
+          <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
           <button type="button" class="markit-button markit-theme-d1 mark-btn"></i>Go to Auction</button>
         </div>
       @empty
@@ -125,11 +130,6 @@
 
       
     <!-- End Middle Column -->
-      <div class="markit-row-padding">
-        <div>
-              {{ $posts->links() }}         
-        </div>
-      </div>
     </div>
     
     <!-- Right Column -->
@@ -148,7 +148,6 @@
     </div>
     
   <!-- End Grid -->
-
   </div>
 
 <script>
