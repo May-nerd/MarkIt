@@ -34,11 +34,12 @@
     <!-- Middle Column -->
     <div class="markit-col m7">
         <div class="markit-col m12">
-          <div class="markit-container">
+          <div class="markit-container" style="margin-top: -9px">
             <h6 class="markit-opacity"></h6>
             <a class="btn btn-success" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
           </div>
         </div>
+        <br>
         <br>
         <br>
       
