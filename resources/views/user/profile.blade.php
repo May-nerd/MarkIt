@@ -92,6 +92,7 @@
     </div>
   </div>
     
+
     <!-- Right Column -->
 {{--     <div class="markit-col m2">
       <form role="form" method="POST" action="{{ url('/createauction') }}" enctype="multipart/form-data">
@@ -106,7 +107,7 @@
         </div>
       </form>
       <br>      
-    <!-- End Right Column -->
+
     </div> --}}
     
   <!-- End Grid -->

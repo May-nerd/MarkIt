@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Route::get('/notifications', function () {
     return view('notifications');
 });
@@ -25,6 +21,9 @@ Auth::routes();
 Route::post('/registrationform', 'RegistrationController@index');
 
 Route::group(['middleware' => 'auth'], function(){
+
+	Route::get('/', 'HomeController@welcome');
+
 	Route::get('/home', 'HomeController@index');
 	Route::resource('/profile', 'ProfileController');
 

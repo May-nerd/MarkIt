@@ -90,10 +90,6 @@
                         </tr>
                       @empty
                       @endforelse
-
-
-
-                      
                     </table>
                   </div>
               </div>
@@ -107,12 +103,30 @@
     
     <!-- Right Column -->
     <div class="markit-col m2">
-      <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container"><br>
-          <p>Ends <span class="text-success">{{$left->diffForHumans()}}</span>  </p>
+      <div class="markit-card-2">
+        <div class="countdown-container"><br>
+          <h1 class="countdowntitle text-center text-success">Countdown: </h1>
+          <div id="clockdiv">
+            <div>
+              <span class="days"></span>
+              <div class="smalltext">Days</div>
+            </div>
+            <div>
+              <span class="hours"></span>
+              <div class="smalltext">Hours</div>
+            </div>
+            <div>
+              <span class="minutes"></span>
+              <div class="smalltext">Minutes</div>
+            </div>
+            <div>
+              <span class="seconds"></span>
+              <div class="smalltext">Seconds</div>
+            </div>
+          </div>
+          <span id="timestamp" style="display: none;">{{$left}}</span>
           <br>
-          {{-- <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button> --}}
-          {{-- <p>Sat, 27 May 2017</p> --}}
+
         </div>
       </div>
       <br>
@@ -131,7 +145,7 @@
       </div>
       <br>
       
-      @if ($auction->marks->where('user_id', Auth::user()->id)->count() == 0 && (Auth::user()->id != $auction->poster_id))
+      @if ((Auth::user()->id != $auction->poster_id))
         <div class="markit-card-2 markit-round markit-white markit-center">
           <div class="markit-container" style="padding-top: 20px; padding-bottom: 20px;">
             <form class="form-horizontal" role="form" method="POST" action="{{ url('/createmark') }}">
@@ -162,5 +176,10 @@
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/clock.css')}}">
+@endpush
+
+@push('scripts')
+<script src="{{asset('js/newscript.js')}}"></script>
 @endpush
 

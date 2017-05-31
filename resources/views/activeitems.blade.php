@@ -93,18 +93,6 @@
     </div>
     
     <!-- Right Column -->
-    <div class="markit-col m2">
-      <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container">
-          <p>Nearest Auction to End:</p>
-          <p>6 Days, 23 Hours left</p>
-          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
-          <p>Sat, 27 May 2017</p>
-        </div>
-      </div>
-      <br>      
-    <!-- End Right Column -->
-    </div>
     
   <!-- End Grid -->
   </div>

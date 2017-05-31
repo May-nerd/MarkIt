@@ -18,13 +18,12 @@
          <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
 
          <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
+
          <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
 
+
         </div>
-
       </div>
-
-      
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
@@ -66,10 +65,12 @@
           </div>
 
 
+
 {{--           <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
           <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Marks (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</a>
          {{-- <div class="markit-button markit-theme-d1 mark-btn"></div> --}}
+
 
         </div>
       @empty
@@ -120,7 +121,6 @@ function myFunction(id) {
         x.previousElementSibling.className.replace(" markit-theme-d1", "");
     }
 }
-
 // Used to toggle the menu on smaller screens when clicking on the menu button
 function openNav() {
     var x = document.getElementById("navDemo");
@@ -137,4 +137,3 @@ function openNav() {
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
 @endpush
-

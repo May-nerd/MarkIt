@@ -57,7 +57,7 @@ class AuctionController extends Controller
         $auction = Auction::find($id);
         if(Auth::user()->id == $auction->poster_id){
             $auction->delete();
-        }
+        }   
         return redirect('/profile/'.Auth::user()->username);
     }
 
