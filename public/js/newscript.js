@@ -1,11 +1,13 @@
 function getTimeRemaining(endtime) {
+  var endtime1 = new Date(endtime); 
   var now = new Date();
-  var enddate1 = new Date(endtime);
-  var t = enddate1 - now;
-  var seconds = Math.floor((t / 1000) % 60);
-  var minutes = Math.floor((t / 1000 / 60) % 60);
-  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  var t = endtime1 - now;
+  console.log(endtime1.toUTCString() + " " + now.toUTCString());
+  t = t/1000;
+  var seconds = Math.floor((t) % 60);
+  var minutes = Math.floor((t / 60) % 60);
+  var hours = Math.floor((t / (60 * 60)) % 24);
+  var days = Math.floor(t / (60 * 60 * 24));
   return {
     'total': t,
     'days': days,

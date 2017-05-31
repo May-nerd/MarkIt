@@ -24,8 +24,7 @@ class AuctionController extends Controller
 
 
         $days = $auction->auction_days;
-        $end_date = Carbon::now()->addDays($days);
-        $left = $end_date->subDays(Carbon::now()->dayOfWeek);
+        $left = $auction->created_at->addDays($days);
 
 
         return view('auction', compact('auction', 'left'));

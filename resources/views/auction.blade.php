@@ -124,7 +124,7 @@
               <div class="smalltext">Seconds</div>
             </div>
           </div>
-          <span id="timestamp" style="display: none;">{{$left}}</span>
+          <span id="timestamp" style="display: block;">{{$left}}</span>
           <br>
 
         </div>
