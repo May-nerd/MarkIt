@@ -31,13 +31,12 @@ Route::group(['middleware' => 'auth'], function(){
 	Route::get('/addauction',  'AuctionController@add');	
 	Route::get('/auction/{id}',  'AuctionController@show');	
 	Route::post('/createauction',  'AuctionController@create');	
+	Route::get('/deleteauction/{id}',  'AuctionController@destroy');	
 
 	Route::post('/createmark',  'MarkController@index');	
 
-	Route::get('/activeitems',  function () {
-	    return view('activeitems');
-	});
-	Route::get('/markeditems',  function () {
-	    return view('activeitems');
-	});
+	// Route::get('/activeitems',  'HomeController@activeitems');
+	Route::get('/markeditems',  'HomeController@markeditems');
+	Route::get('/search',  'HomeController@search');
+
 });

@@ -9,114 +9,99 @@
       <!-- Profile -->
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
-         <h4 class="markit-center">My Profile</h4>
-         <p class="markit-center"><img src="/uploads/minions.png" class="markit-circle" style="height:106px;width:106px" alt="User"></p>
+
+         <h4 class="markit-center">{{ Auth::user()->fname." ".Auth::user()->lname }}</h4>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
+         </p>
          <hr>
-         <p><i class="fa fa-pencil fa-fw markit-margin-right markit-text-theme"></i> Designer, UI</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> London, UK</p>
-         <p><i class="fa fa-birthday-cake fa-fw markit-margin-right markit-text-theme"></i> April 1, 1988</p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
+
+         <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
+
         </div>
 
       </div>
-      <br>
+
       
       <!-- Accordion -->
       <div class="markit-card-2 markit-round">
         <div class="markit-white">
+
           <a class="markit-button markit-block markit-theme-l1 markit-left-align remove-anchor-design" data-toggle="tooltip" title="Edit Profile" href="/profile/{{ Auth::user()->username }}/edit"><i class="fa fa-pencil fa-fw markit-margin-right"> Edit Profile</i></a>
         </div>      
       </div>
       <br>
-    
     <!-- End Left Column -->
     </div>
     
     <!-- Middle Column -->
     <div class="markit-col m7">
-    
-      <div class="markit-row-padding">
-        <div class="markit-col m12">
-          <div class="markit-card-2 markit-round markit-white">
-            <div class="markit-container markit-padding">
-              <h6 class="markit-opacity">Social Media template by w3.css</h6>
-              <p contenteditable="true" class="markit-border markit-padding">Status: Feeling Blue</p>
-              <button type="button" class="markit-button markit-theme"><i class="fa fa-pencil"></i>  Post</button> 
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4>
-        <h6>Rating: 5 Immortal Pearls</h6><br>
-        <hr class="markit-clear">
-        <p>Qilin Horns</p>
-          <div class="markit-row-padding" style="margin:0 -16px">
-            <div class="markit-half">
-              <img class="img-responsive posted-image" src="/uploads/qilin.jpg" alt="Item Photo">
-            </div>
-            <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-        </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark<span> (5)</span></button>
-      </div>
 
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">1 min</span>
-        <h4>John Doe</h4><br>
-        <hr class="markit-clear">
-        <p>Drop of Minion's Might</p>
-          <div class="markit-row-padding" style="margin:0 -16px">
+      <div class="markit-col m12">
+
+        <div class="markit-container" style="margin-top: -9px; margin-bottom: 16px;">
+          <h6 class="markit-opacity"></h6>
+          <a class="btn btn-primary" style="width:100%" href="/addauction"> CREATE AN AUCTION </a>
+        </div>
+        
+      @forelse ($posts as $post)
+        <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
+          <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
+
+          <span class="markit-right markit-opacity">{{$post->updated_at->diffForHumans()}}</span>
+          <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
+          {{-- <h6>Rating: 5 Immortal Pearls</h6> --}}
+
+          <hr class="markit-clear">
+          <div class="markit-row-padding">
+            <p class="item-name">{{ucwords($post->item_name)}}</p>
             <div class="markit-half">
-              <img class="img-responsive posted-image" src="/uploads/minions.png" alt="Item Photo">
+              <img class="img-responsive posted-image" src="{{ Storage::disk()->url("public/auctions/".$post->image_path)}}" alt="Item Photo">
             </div>
             <div class="markit-half">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p>{{$post->description}}</p>
+            </div>
           </div>
-        </div>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button>
-      </div>
-      
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">16 min</span>
-        <h4>Jane Doe</h4><br>
-        <hr class="markit-clear">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-      </div>  
 
-      <div class="markit-container markit-card-2 markit-white markit-round markit-margin"><br>
-        <img src="/uploads/minions.png" alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
-        <span class="markit-right markit-opacity">32 min</span>
-        <h4>Angie Jane</h4><br>
-        <hr class="markit-clear">
-        <p>Have you seen this?</p>
-        <img src="/w3images/nature.jpg" style="width:100%" class="markit-margin-bottom">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <button type="button" class="markit-button markit-theme-d1 markit-margin-bottom"><i class="fa fa-check"></i>  Mark</button> 
-      </div> 
+
+{{--           <button type="button" class="markit-button markit-theme-d1 mark-btn"><i class="fa fa-check"></i>  Mark (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
+          {{-- <button type="button" class="btn btn-info"><i class="fa fa-remove"></i>  Unmark (<span id="unmark{{ $post->id }}">{{ $post->marks->count() }}</span>)</button> --}}
+          <a href="/auction/{{$post->id}}" class="markit-button markit-theme-d1 mark-btn">Marks (<span id="mark{{ $post->id }}">{{ $post->marks->count() }}</span>)</a>
+         {{-- <div class="markit-button markit-theme-d1 mark-btn"></div> --}}
+
+        </div>
+      @empty
+      @endforelse
+
+{{--       <div class="markit-row-padding text-center">
+        <div>
+          {{$posts->links()}}
+        </div>
+      </div> --}}
+
       
     <!-- End Middle Column -->
     </div>
+  </div>
     
     <!-- Right Column -->
-    <div class="markit-col m2">
-      <div class="markit-card-2 markit-round markit-white markit-center">
-        <div class="markit-container">
-          <p>Nearest Auction to End:</p>
-          <p>6 Days, 23 Hours left</p>
-          <button type="button" class="btn btn-success" style="width: 100%"><strong>OPEN</strong></button>
-          <p>Sat, 27 May 2017</p>
+{{--     <div class="markit-col m2">
+      <form role="form" method="POST" action="{{ url('/createauction') }}" enctype="multipart/form-data">
+        <div class="markit-card-2 markit-round markit-white markit-center">
+          <div class="markit-container">
+            <p>Recent the Mark:</p>
+            <img src="/uploads/qilin.jpg" alt="Forest" style="width:100%;">
+            <p><strong>Qilin Horns</strong></p>
+            <p>Friday 15:00</p>
+            <p><button class="markit-button markit-block markit-theme-l4">Go to Auction</button></p>
+          </div>
         </div>
-      </div>
+      </form>
       <br>      
     <!-- End Right Column -->
-    </div>
+    </div> --}}
     
   <!-- End Grid -->
   </div>
@@ -149,5 +134,6 @@ function openNav() {
 
 @push('styles')
 <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/auction.css')}}">
 @endpush
 

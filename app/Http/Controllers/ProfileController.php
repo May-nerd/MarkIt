@@ -5,17 +5,26 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use App\Auction;
 
 class ProfileController extends Controller
 {
-    public function profile($username){
-    	$user = User::whereUsername($username)->first();
-    	return view('user.profile', compact('user'));
+    // public function profile($username){
+    // 	$user = User::whereUsername($username)->first();
+    // 	return view('user.profile', compact('user'));
+    // }
+
+    public function profile($username)
+    {
+        $user = User::whereUsername($username)->first();
+        $posts = Auction::orderBy('id', 'desc')->paginate(10);
+        return view('user.profile', compact('user', 'posts'));
     }
 
     public function show($username){
     	$user = User::whereUsername($username)->first();
-    	return view('user.profile', compact('user'));
+      $posts = Auction::where('poster_id', $user->id)->orderBy('id', 'desc')->paginate(10);
+      return view('user.profile', compact('user', 'posts'));
     }
 
     public function edit($username){

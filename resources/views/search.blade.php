@@ -10,15 +10,15 @@
       <div class="markit-card-2 markit-round markit-white">
         <div class="markit-container">
 
-         <h4 class="markit-center">{{ $user->fname." ".$user->lname }}</h4>
-         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".$user->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
+         <h4 class="markit-center">{{ Auth::user()->fname." ".Auth::user()->lname }}</h4>
+         <p class="markit-center"><img src="{{ Storage::disk()->url("public/profilepicture/".Auth::user()->profilepicture) }}" class="markit-circle" style="height:106px;width:106px" alt="Avatar">
          </p>
          <hr>
-         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> {{$user->username}}</p>
-         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower($user->town)) }}, {{ucwords(strtolower($user->province)) }}</p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i> Maynard Vargas</p>
+         <p><i class="fa fa-home fa-fw markit-margin-right markit-text-theme"></i> {{ucwords(strtolower(Auth::user()->town)) }}, {{ucwords(strtolower(Auth::user()->province)) }}</p>
 
          <!-- <p><i class="fa fa-thumbs-up fa-fw markit-margin-right markit-text-theme"></i> Rating: <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i></p> -->
-         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{$user->bio}}</span></p>
+         <p><i class="fa fa-user fa-fw markit-margin-right markit-text-theme"></i>Bio: <span>{{Auth::user()->bio}}</span></p>
 
         </div>
 
@@ -26,15 +26,12 @@
 
       
       <!-- Accordion -->
-      @if (Auth::user()->id == $user->id)
-        <div class="markit-card-2 markit-round">
-          <div class="markit-white">
+      <div class="markit-card-2 markit-round">
+        <div class="markit-white">
 
-            <a class="markit-button markit-block markit-theme-l1 markit-left-align remove-anchor-design" data-toggle="tooltip" title="Edit Profile" href="/profile/{{ Auth::user()->username }}/edit"><i class="fa fa-pencil fa-fw markit-margin-right"> Edit Profile</i></a>
-          </div>      
-        </div>
-      @endif
-
+          <a class="markit-button markit-block markit-theme-l1 markit-left-align remove-anchor-design" data-toggle="tooltip" title="Edit Profile" href="/profile/{{ Auth::user()->username }}/edit"><i class="fa fa-pencil fa-fw markit-margin-right"> Edit Profile</i></a>
+        </div>      
+      </div>
       <br>
     <!-- End Left Column -->
     </div>
@@ -54,8 +51,6 @@
           <img src='{{ Storage::disk()->url("public/profilepicture/".$post->user->profilepicture)}}' alt="Avatar" class="markit-left markit-circle markit-margin-right user-icon" style="width:60px">
 
           <span class="markit-right markit-opacity">{{$post->updated_at->diffForHumans()}}</span>
-          <br>
-        <span class="markit-right"><a class="text-danger btn btn-sm btn-danger" href="/deleteauction/{{$post->id}}">Delete</a></span>
           <h4>{{$post->user->fname}} {{$post->user->lname}}</h4>
           {{-- <h6>Rating: 5 Immortal Pearls</h6> --}}
 

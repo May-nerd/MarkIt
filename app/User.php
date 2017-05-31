@@ -47,4 +47,8 @@ class User extends Authenticatable
     {
         $this->attributes['province'] = ucwords($value);
     }
+
+    public function markedAuctions(){
+        return $this->belongsToMany('App\Auction', 'marks');
+    }
 }
